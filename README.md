@@ -1,5 +1,4 @@
 ## NUAATimeTable
-============
 
 For students in NUAA import their time table to Calendar.app on iOS device
 
@@ -13,7 +12,7 @@ For students in NUAA import their time table to Calendar.app on iOS device
 ![Image](Screenshots/IMG_5191.PNG "Image")
 ![Image](Screenshots/IMG_5192.PNG "Image")
 ![Image](Screenshots/IMG_5193.PNG "Image")
-![Image](Screenshots/OSXScreenshot.PNG "Image")
+![Image](Screenshots/OSXScreenshot.png "Image")
 
 ## Requirements
 
