@@ -14,4 +14,7 @@ class courseInfoCell : UITableViewCell {
     @IBOutlet weak var jsm: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var roomid: UILabel!
+    class func keys() -> [String] {
+        return ["kcm","jsm","time","roomid"]
+    }
 }

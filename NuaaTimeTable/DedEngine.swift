@@ -10,12 +10,11 @@ import Foundation
 import EventKit
 
 class DedEngine {
-    let keyArray=["kcm","jsm","week","unit","roomid","weeks","xiaoqu"]
-    var course = [[String:String]]()
+    var courses = [courseInfo]()
     var eventStore = EKEventStore()
     func GetCourseTableByXh(xh : String,xn : String, xq : String, success : SuccessHandler) {
         NSLog("querry = \(xh)")
-        self.course.removeAll()
+        self.courses.removeAll()
         let dic = ["xn":xn,"xq":xq,"xh":xh]
         let utility = SoapUtility(fromFile: "NuaaDedWebService")
         let postXml = utility.BuildSoapwithMethodName("GetCourseTableByXh", withParas:dic)
@@ -35,20 +34,11 @@ class DedEngine {
         let xmlData = xmlString.dataUsingEncoding(NSUTF8StringEncoding)
         var error:NSError? = nil
         let xmldoc = AEXMLDocument(xmlData: xmlData!, error: &error)
-        //println(xmldoc?.xmlString)
-        let xml = xmldoc!
-        let junkdoc = xml["soap:Envelope"]["soap:Body"]["GetCourseTableByXhResponse"]["GetCourseTableByXhResult"]["diffgr:diffgram"]["NewDataSet"].children.last
-        
-        NSLog("%@",junkdoc!.xmlString)
         
         if (error != nil) { NSLog("%@", error!.description) }
         if let xml = xmldoc{
             for child in xml["soap:Envelope"]["soap:Body"]["GetCourseTableByXhResponse"]["GetCourseTableByXhResult"]["diffgr:diffgram"]["NewDataSet"].children {
-                var courseInfo = [String:String]()
-                for key in self.keyArray{
-                    courseInfo[key] = child[key].value
-                }
-                course.append(courseInfo)
+                courses.append(courseInfo(XML: child))
             }
         }
 
@@ -67,34 +57,34 @@ class DedEngine {
     func importEventsImp(){
         var calendar = self.getCalendarby("NuaaTimeTable")
         var dateComponents = NSDateComponents()
-        dateComponents.year  = 2014
-        dateComponents.month = 9
-        dateComponents.day   = 1
+        dateComponents.year  = 2015
+        dateComponents.month = 3
+        dateComponents.day   = 2
         var dateCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
-        var semesterDate = dateCalendar?.dateFromComponents(dateComponents)
-        let timeForClass : [Double] = [8*60*60,10*60*60+15*60,14*60*60,16*60*60+15*60,18*60*60+30*60]
-        for courseInfo in self.course {
-            var title    = courseInfo["kcm"   ]! + " " + courseInfo["jsm"]!
-            var location = courseInfo["roomid"]! + "@" + courseInfo["xiaoqu"]!
-            var weeks = courseInfo["weeks"]!.componentsSeparatedByString(",")
-            let unit = (courseInfo["unit"]!.toInt()! - 1 ) / 2
-            let weekDay : Double = Double(courseInfo["week"]!.toInt()!) - 1
-            let oneDay  : Double = 60 * 60 * 24
-            let oneWeek : Double = oneDay * 7
-            for weekString in weeks {
-                let weekNum : Double = Double(weekString.toInt()!) - 1
-                let startDate = NSDate(timeInterval: weekNum * oneWeek + weekDay * oneDay + timeForClass[unit],
-                    sinceDate: semesterDate!)
+        var semesterDate = dateCalendar?.dateFromComponents(dateComponents)!
+        let timeForClass : [Int] = [8*60*60,10*60*60+15*60,14*60*60,16*60*60+15*60,18*60*60+30*60]
+        
+        for course in self.courses {
+            let weekDay : Int = course.week - 1
+            let oneDay  : Int = 60 * 60 * 24
+            let oneWeek : Int = oneDay * 7
+            for weekNum in course.weeks {
+                let interval =
+                    (weekNum - 1)  * oneWeek +
+                    weekDay * oneDay +
+                    timeForClass[ (course.unit - 1 ) / 2 ]
+                
+                let startDate = NSDate(timeInterval: Double(interval), sinceDate: semesterDate!)
                 let endDate = startDate.dateByAddingTimeInterval((60 + 45) * 60)
                 var event = EKEvent(eventStore: self.eventStore)
-                event.title = title
+                event <== (course,["title","location"])
                 event.startDate = startDate
                 event.endDate = endDate
-                event.location = location
                 event.calendar = calendar
                 event.allDay = false
                 self.eventStore.saveEvent(event, span: EKSpanThisEvent, commit: false, error: nil)
             }
+            
         }
         self.eventStore .commit(nil)
     }
