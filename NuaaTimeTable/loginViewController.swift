@@ -10,40 +10,47 @@ import UIKit
 
 
 protocol loginDelegate {
-    func loginbyXh(xh:String)
+    func GetCourseTableByXh(xh : String,xn : String, xq : String)
 }
 
-class loginViewController: UIViewController {
+class loginViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     var delegate : loginDelegate? = nil
     @IBOutlet weak var xhTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     @IBAction func okButtonClicked(sender: UIButton) {
-        self.delegate?.loginbyXh(xhTextField.text)
+        self.delegate?.GetCourseTableByXh(self.xhTextField.text, xn: xn, xq: xq)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func cancelButtonClicked(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    let xnArray = ["2014-2015","2015-2016","2016-2017"]
+    let xqArray = ["1","2"]
+    var xn = String()
+    var xq = String()
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
     }
-    */
-
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return component == 0 ? xnArray.count : xqArray.count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return component == 0 ? xnArray[row] : xqArray[row]
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        println("row\(row) component\(component)")
+        //xnxq [component] = xnxqArray[component][row]
+        if(component == 0){
+            xn = xnArray[row]
+        }
+        else{
+            xq = xqArray[row]
+        }
+    }
 }

@@ -10,6 +10,7 @@
 		BF4600A51A8D977C007C0BC3 /* courseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A41A8D977C007C0BC3 /* courseInfo.swift */; };
 		BF4600A81A8F486A007C0BC3 /* toolbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A71A8F4869007C0BC3 /* toolbox.swift */; };
 		BF4625B81A7CF85700A65495 /* courseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4625B71A7CF85700A65495 /* courseInfoCell.swift */; };
+		BF5882511A8FB9DC00B1E571 /* schoolCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5882501A8FB9DC00B1E571 /* schoolCalendarViewController.swift */; };
 		BF9409401A18C4FD00160BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */; };
 		BF9409421A18C4FD00160BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409411A18C4FD00160BB6 /* ViewController.swift */; };
 		BF9409451A18C4FD00160BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9409431A18C4FD00160BB6 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		BF4600A61A8F2CC4007C0BC3 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		BF4600A71A8F4869007C0BC3 /* toolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toolbox.swift; sourceTree = "<group>"; };
 		BF4625B71A7CF85700A65495 /* courseInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseInfoCell.swift; sourceTree = "<group>"; };
+		BF5882501A8FB9DC00B1E571 /* schoolCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schoolCalendarViewController.swift; sourceTree = "<group>"; };
 		BF94093A1A18C4FD00160BB6 /* NuaaTimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuaaTimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF94093E1A18C4FD00160BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9409411A18C4FD00160BB6 /* ViewController.swift */,
+				BF5882501A8FB9DC00B1E571 /* schoolCalendarViewController.swift */,
 				BF9409B21A18D87300160BB6 /* loginViewController.swift */,
 			);
 			name = Controller;
@@ -383,7 +386,7 @@
 				TargetAttributes = {
 					BF9409391A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = ZRY6W7A7K7;
+						DevelopmentTeam = AKXV797RED;
 					};
 					BF94094E1A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
@@ -449,6 +452,7 @@
 				BF4600A51A8D977C007C0BC3 /* courseInfo.swift in Sources */,
 				BF9409971A18C5CF00160BB6 /* DDXMLDocument.m in Sources */,
 				BF9409991A18C5CF00160BB6 /* DDXMLNode.m in Sources */,
+				BF5882511A8FB9DC00B1E571 /* schoolCalendarViewController.swift in Sources */,
 				BF9409921A18C5CF00160BB6 /* AFURLConnectionOperation.m in Sources */,
 				BF9409961A18C5CF00160BB6 /* NSString+DDXML.m in Sources */,
 				BF9409421A18C4FD00160BB6 /* ViewController.swift in Sources */,
@@ -585,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",
@@ -592,6 +597,7 @@
 				INFOPLIST_FILE = NuaaTimeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 			};
 			name = Debug;
@@ -601,6 +607,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",
@@ -608,6 +615,7 @@
 				INFOPLIST_FILE = NuaaTimeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 			};
 			name = Release;

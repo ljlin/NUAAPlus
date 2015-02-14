@@ -19,25 +19,15 @@ class courseInfo: NSObject {
     var weeks  = [Int]()
 
     
-    var title :String {
-        return "\(self.kcm) \(self.jsm)"
-    }
-    var location : String {
-        return "\(self.roomid)@\(self.xiaoqu)"
-    }
-    var time : String {
-        return "周\(self.week)第\(self.unit)-\(self.unit+1)节"
-    }
+    var title    : String { return "\(self.kcm) \(self.jsm)" }
+    var location : String { return "\(self.roomid)@\(self.xiaoqu)"}
+    var time     : String { return "周\(self.week)第\(self.unit)-\(self.unit+1)节"}
     
     class func keys() -> [String] {
         return ["kcm","jsm","xiaoqu","roomid","week","unit","weeks","title","location","time"]
     }
-    class func keysForStringProperty() -> [String] {
-        return Array(courseInfo.keys()[0...3])
-    }
-    class func keysForIntProperty() -> [String] {
-        return Array(courseInfo.keys()[4...5])
-    }
+    class func keysForStringProperty() -> [String] { return Array(courseInfo.keys()[0...3])}
+    class func keysForIntProperty()    -> [String] { return Array(courseInfo.keys()[4...5])}
     
     init(XML:AEXMLElement) {
         super.init()

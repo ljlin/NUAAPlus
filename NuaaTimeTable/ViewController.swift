@@ -12,14 +12,13 @@ class ViewController: UITableViewController,loginDelegate {
     var engine = DedEngine()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loginbyXh("161310120")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    func loginbyXh(xh: String) {
-        self.engine.GetCourseTableByXh(xh, xn: "2014-2015", xq: "2", success: {
+    func GetCourseTableByXh(xh : String,xn : String, xq : String) {
+        self.engine.GetCourseTableByXh(xh, xn:xn, xq:xq, success: {
             self.tableView.reloadData()
         })
     }

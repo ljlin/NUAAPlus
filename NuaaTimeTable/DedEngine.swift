@@ -9,6 +9,8 @@
 import Foundation
 import EventKit
 
+typealias SuccessHandler = ()->()
+
 class DedEngine {
     var courses = [courseInfo]()
     var eventStore = EKEventStore()

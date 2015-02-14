@@ -11,6 +11,11 @@
 
 #import "SoapService.h"
 #import "SoapUtility.h"
-typedef void (^SuccessHandler) (void);
+
+
+//typedef void (^SuccessHandler) (void);
+
+
+
 
 #endif
