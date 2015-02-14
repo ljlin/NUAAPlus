@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4600A51A8D977C007C0BC3 /* courseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A41A8D977C007C0BC3 /* courseInfo.swift */; };
+		BF4600A81A8F486A007C0BC3 /* toolbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A71A8F4869007C0BC3 /* toolbox.swift */; };
 		BF4625B81A7CF85700A65495 /* courseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4625B71A7CF85700A65495 /* courseInfoCell.swift */; };
 		BF9409401A18C4FD00160BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */; };
 		BF9409421A18C4FD00160BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409411A18C4FD00160BB6 /* ViewController.swift */; };
@@ -52,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF4600A41A8D977C007C0BC3 /* courseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseInfo.swift; sourceTree = "<group>"; };
+		BF4600A61A8F2CC4007C0BC3 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		BF4600A71A8F4869007C0BC3 /* toolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toolbox.swift; sourceTree = "<group>"; };
 		BF4625B71A7CF85700A65495 /* courseInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseInfoCell.swift; sourceTree = "<group>"; };
 		BF94093A1A18C4FD00160BB6 /* NuaaTimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuaaTimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF94093E1A18C4FD00160BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +159,7 @@
 		BF94093C1A18C4FD00160BB6 /* NuaaTimeTable */ = {
 			isa = PBXGroup;
 			children = (
+				BF4600A61A8F2CC4007C0BC3 /* MyPlayground.playground */,
 				BF9409A81A18C92700160BB6 /* Class */,
 				BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */,
 				BF9409AA1A18CB4800160BB6 /* Model */,
@@ -292,6 +298,7 @@
 		BF9409A81A18C92700160BB6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				BF4600A71A8F4869007C0BC3 /* toolbox.swift */,
 				BF9409AE1A18CC3100160BB6 /* AEXML.swift */,
 				BF9409601A18C5CF00160BB6 /* AFNetworking */,
 				BF9409741A18C5CF00160BB6 /* KissXML */,
@@ -313,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9409AC1A18CB7500160BB6 /* DedEngine.swift */,
+				BF4600A41A8D977C007C0BC3 /* courseInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -375,6 +383,7 @@
 				TargetAttributes = {
 					BF9409391A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = ZRY6W7A7K7;
 					};
 					BF94094E1A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
@@ -429,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF94099B1A18C5CF00160BB6 /* SoapService.m in Sources */,
+				BF4600A81A8F486A007C0BC3 /* toolbox.swift in Sources */,
 				BF94098D1A18C5CF00160BB6 /* AFHTTPRequestOperation.m in Sources */,
 				BF94098E1A18C5CF00160BB6 /* AFImageRequestOperation.m in Sources */,
 				BF9409911A18C5CF00160BB6 /* AFPropertyListRequestOperation.m in Sources */,
@@ -436,6 +446,7 @@
 				BF94098F1A18C5CF00160BB6 /* AFJSONRequestOperation.m in Sources */,
 				BF94099C1A18C5CF00160BB6 /* SoapUtility.m in Sources */,
 				BF4625B81A7CF85700A65495 /* courseInfoCell.swift in Sources */,
+				BF4600A51A8D977C007C0BC3 /* courseInfo.swift in Sources */,
 				BF9409971A18C5CF00160BB6 /* DDXMLDocument.m in Sources */,
 				BF9409991A18C5CF00160BB6 /* DDXMLNode.m in Sources */,
 				BF9409921A18C5CF00160BB6 /* AFURLConnectionOperation.m in Sources */,
@@ -573,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",
@@ -588,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",
