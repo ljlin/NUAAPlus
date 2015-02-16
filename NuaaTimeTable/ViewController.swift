@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UITableViewController,LoginDelegate {
-    var engine = DedEngine()
+    var engine = DedEngine.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
     }

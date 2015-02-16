@@ -11,10 +11,15 @@ import EventKit
 
 typealias SuccessHandler = ()->()
 
-class DedEngine {
+class DedEngine : NSObject {
     var courses = [CourseInfo]()
     var eventStore = EKEventStore()
-
+    class var sharedInstance : DedEngine {
+        struct Singleton {
+            static let instance = DedEngine()
+        }
+        return Singleton.instance
+    }
     func GetCourseTableByXh(xh : String,xn : String, xq : String, success : SuccessHandler) {
         NSLog("querry = \(xh)")
         self.courses.removeAll()

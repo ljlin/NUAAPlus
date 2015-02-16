@@ -10,6 +10,9 @@ import UIKit
 
 class ExamListViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
+    
+    var engine = DedEngine.sharedInstance
+
     override func viewDidLoad() {
         super.viewDidLoad();
         self.webView.scalesPageToFit = true

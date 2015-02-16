@@ -9,9 +9,12 @@
 import UIKit
 
 class UserInfoSettingTableViewController: UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate {
-    var delegate : LoginDelegate? = nil
     @IBOutlet weak var xhTextField : UITextField!
     @IBOutlet weak var pwdTextField : UITextField!
+    
+    var engine = DedEngine.sharedInstance
+    var delegate : LoginDelegate? = nil
+
     
     @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
         println(self.xhTextField.text)

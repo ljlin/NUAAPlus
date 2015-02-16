@@ -275,14 +275,14 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="学年学期" id="FbB-06-s1f">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="162" id="Db1-sb-6Xn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="128" id="Db1-sb-6Xn">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Db1-sb-6Xn" id="C3c-a6-B7q">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-3b-HZO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                                                    <rect key="frame" x="0.0" y="-21.5" width="600" height="162"/>
                                                     <connections>
                                                         <outlet property="dataSource" destination="oL2-zX-rya" id="acX-6F-G3A"/>
                                                         <outlet property="delegate" destination="oL2-zX-rya" id="97A-2f-PRm"/>
@@ -290,9 +290,10 @@
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="top" secondItem="C3c-a6-B7q" secondAttribute="top" id="22M-Iw-Xgg"/>
-                                                <constraint firstAttribute="trailing" secondItem="RDJ-3b-HZO" secondAttribute="trailing" id="6Xh-SI-FQ6"/>
-                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="leading" secondItem="C3c-a6-B7q" secondAttribute="leading" id="OmT-lZ-abr"/>
+                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="top" secondItem="C3c-a6-B7q" secondAttribute="top" id="ADd-cI-QOU"/>
+                                                <constraint firstAttribute="trailing" secondItem="RDJ-3b-HZO" secondAttribute="trailing" id="Iuq-Ow-M5i"/>
+                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="leading" secondItem="C3c-a6-B7q" secondAttribute="leading" id="Nm1-X9-ppZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RDJ-3b-HZO" secondAttribute="bottom" id="tcG-zg-9wo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -325,20 +326,21 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="162" id="OHm-yV-2NS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="OHm-yV-2NS">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OHm-yV-2NS" id="HqM-S5-thF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zwm-dH-OcA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                                                    <rect key="frame" x="0.0" y="-4.5" width="600" height="162"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="445784134.91355997">
                                                         <!--2015-02-16 12:55:34 +0000-->
                                                     </date>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Zwm-dH-OcA" secondAttribute="bottom" id="FeC-zm-heM"/>
                                                 <constraint firstItem="Zwm-dH-OcA" firstAttribute="top" secondItem="HqM-S5-thF" secondAttribute="top" id="UTo-9k-53L"/>
                                                 <constraint firstAttribute="trailing" secondItem="Zwm-dH-OcA" secondAttribute="trailing" id="djg-fe-GPj"/>
                                                 <constraint firstItem="Zwm-dH-OcA" firstAttribute="leading" secondItem="HqM-S5-thF" secondAttribute="leading" id="s6q-Gk-0wS"/>
@@ -422,7 +424,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="oL2-zX-rya" kind="relationship" relationship="rootViewController" id="sQw-sU-RwE"/>
+                        <segue destination="oL2-zX-rya" kind="relationship" relationship="rootViewController" id="dLY-0E-Paq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcq-Th-p38" userLabel="First Responder" sceneMemberID="firstResponder"/>
