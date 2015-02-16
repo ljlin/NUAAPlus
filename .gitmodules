@@ -1,0 +1,3 @@
+[submodule "Async"]
+	path = Async
+	url = https://github.com/duemunk/Async

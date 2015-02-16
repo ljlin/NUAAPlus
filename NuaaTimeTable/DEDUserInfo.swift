@@ -8,12 +8,11 @@
 
 import UIKit
 
-class UserInfo: NSObject {
+class DEDUserInfo: NSObject {
     var xh  = String()
     var pwd = String()
     var xn  = String()
     var xq  = String()
-    var bj  = String()
     var setSemesterDateManually = false
     var semesterDate = NSDate()
 }

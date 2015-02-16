@@ -32,18 +32,36 @@ func ?< (obj : NSObject , key : String) -> AnyObject?{
 }
 
 
+
+
 var ttt = Info()
 var haha = infocee()
-let a : String = (ttt ?< "kcm") as String
-
-
 infix operator <==  { associativity left precedence 140 }
-
 func <== (to:NSObject, rig:(from:NSObject, keys:[String])){
     for key in rig.keys {
         to.setValue(rig.from.valueForKey(key), forKeyPath: key)
     }
 }
+
+func <== (to:NSObject, from:[String:AnyObject?]){
+    for (key,value) in from {
+        to.setValue(value, forKeyPath:key)
+    }
+}
+
+ttt <== ["kcm":"hahah","jsm":"啥玩意"]
+
+ttt
+
+
+
+
+
+
+let a : String = (ttt ?< "kcm") as String
+
+
+
 
 
 haha <== (ttt,["kcm"])

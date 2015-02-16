@@ -44,8 +44,6 @@ class LoginViewController: UIViewController,UIPickerViewDataSource,UIPickerViewD
         return component == 0 ? xnArray[row] : xqArray[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        println("row\(row) component\(component)")
-        //xnxq [component] = xnxqArray[component][row]
         if(component == 0){
             xn = xnArray[row]
         }

@@ -8,26 +8,26 @@
 
 import UIKit
 
-class ViewController: UITableViewController,LoginDelegate {
+class CourseTableViewController: UITableViewController {
     var engine = DedEngine.sharedInstance
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    func GetCourseTableByXh(xh : String,xn : String, xq : String) {
-        self.engine.GetCourseTableByXh(xh, xn:xn, xq:xq, success: {
+    
+    @IBAction func getButtonClicked(sender: AnyObject) {
+        SVProgressHUD.show()
+        var res = true
+        Async.background({
+            res = self.engine.GetCourseTableBySettings()
+        }).main({
+            SVProgressHUD.dismiss()
+            println(res)
             self.tableView.reloadData()
         })
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "loginSegue"){
-            var destination = segue.destinationViewController as LoginViewController
-            destination.delegate = self
-        }
+    @IBAction func importButtonClicked(sender: AnyObject) {
+        Async.background({
+            self.engine.importEvents()
+        })
     }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.engine.courses.count;
     }
@@ -45,8 +45,6 @@ class ViewController: UITableViewController,LoginDelegate {
         return cell!
     }
 
-    @IBAction func importButtonClicked(sender: AnyObject) {
-        self.engine.importEvents()
-    }
+
 }
 

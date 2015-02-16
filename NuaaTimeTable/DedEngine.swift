@@ -12,15 +12,25 @@ import EventKit
 typealias SuccessHandler = ()->()
 
 class DedEngine : NSObject {
-    var courses = [CourseInfo]()
+    var courses = [DEDCourseInfo]()
     var eventStore = EKEventStore()
+    var userInfo : DEDUserInfo? = nil
     class var sharedInstance : DedEngine {
         struct Singleton {
             static let instance = DedEngine()
         }
         return Singleton.instance
     }
-    func GetCourseTableByXh(xh : String,xn : String, xq : String, success : SuccessHandler) {
+    func GetCourseTableBySettings() -> Bool {
+        if let user = userInfo {
+            self.GetCourseTableByXh(user.xh, xn: user.xn, xq: user.xq)
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    func GetCourseTableByXh(xh : String,xn : String, xq : String) {
         NSLog("querry = \(xh)")
         self.courses.removeAll()
         let dic = ["xn":xn,"xq":xq,"xh":xh]
@@ -29,15 +39,9 @@ class DedEngine : NSObject {
         var soapRequest = SoapService()
         soapRequest.PostUrl = "http://ded.nuaa.edu.cn/NetEa/Services/WebService.asmx"
         soapRequest.SoapAction = utility.GetSoapActionByMethodName("GetCourseTableByXh", soapType: SOAP)
-        soapRequest.PostAsync(postXml, success:{(response:String!) in
-                self.analyzexmlString(response)
-                success()
-            },
-            falure: { (error:NSError!) in
-                NSLog("\(error.description)")
-        })
+        let result = soapRequest.PostSync(postXml)
+        self.analyzexmlString(result.Content)
     }
-    
     func analyzexmlString(xmlString:String!){
         let xmlData = xmlString.dataUsingEncoding(NSUTF8StringEncoding)
         var error:NSError? = nil
@@ -46,7 +50,7 @@ class DedEngine : NSObject {
         if (error != nil) { NSLog("%@", error!.description) }
         if let xml = xmldoc{
             for child in xml["soap:Envelope"]["soap:Body"]["GetCourseTableByXhResponse"]["GetCourseTableByXhResult"]["diffgr:diffgram"]["NewDataSet"].children {
-                courses.append(CourseInfo(XML: child))
+                courses.append(DEDCourseInfo(XML: child))
             }
         }
 

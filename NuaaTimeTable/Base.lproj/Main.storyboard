@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--课表导入工具-->
+        <!--个人课表-->
         <scene sceneID="ryx-2u-H1y">
             <objects>
-                <tableViewController id="M76-Cc-wgj" customClass="ViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="M76-Cc-wgj" customClass="CourseTableViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" id="939-8o-LUz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,8 +82,12 @@
                             <outlet property="delegate" destination="M76-Cc-wgj" id="wtz-Q0-bVM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="课表导入工具" id="K5v-s5-0Vr">
-                        <barButtonItem key="leftBarButtonItem" title="登录" id="BE1-iG-lmZ"/>
+                    <navigationItem key="navigationItem" title="个人课表" id="K5v-s5-0Vr">
+                        <barButtonItem key="leftBarButtonItem" title="获取" id="BE1-iG-lmZ">
+                            <connections>
+                                <action selector="getButtonClicked:" destination="M76-Cc-wgj" id="zCm-72-LFt"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="导入" id="frs-uf-wnt">
                             <connections>
                                 <action selector="importButtonClicked:" destination="M76-Cc-wgj" id="ViJ-as-pg9"/>
@@ -169,7 +173,7 @@
             </objects>
             <point key="canvasLocation" x="2528" y="725"/>
         </scene>
-        <!--Canlerdar-->
+        <!--校历-->
         <scene sceneID="9DC-ID-x3K">
             <objects>
                 <viewController id="sTC-JJ-XUr" customClass="SchoolCalendarViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -194,7 +198,7 @@
                             <constraint firstItem="nwG-CN-BOr" firstAttribute="width" secondItem="DWU-YR-twG" secondAttribute="width" id="klz-c0-6Q4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Canlerdar" image="calendar-7" id="emS-qG-SFN"/>
+                    <tabBarItem key="tabBarItem" title="校历" image="calendar-7" id="emS-qG-SFN"/>
                     <connections>
                         <outlet property="webView" destination="nwG-CN-BOr" id="8Cm-WT-GJQ"/>
                     </connections>
@@ -203,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="941" y="1391"/>
         </scene>
-        <!--Settings-->
+        <!--设置-->
         <scene sceneID="Z4B-G0-Ys9">
             <objects>
                 <tableViewController id="oL2-zX-rya" customClass="UserInfoSettingTableViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -355,8 +359,8 @@
                             <outlet property="delegate" destination="oL2-zX-rya" id="Tql-EU-Ga8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="gnh-Yc-Ogf">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="b3J-aJ-E5e">
+                    <navigationItem key="navigationItem" title="设置" id="gnh-Yc-Ogf">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="b3J-aJ-E5e">
                             <connections>
                                 <action selector="saveButtonClicked:" destination="oL2-zX-rya" id="OeH-H6-k48"/>
                             </connections>
@@ -364,7 +368,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="pwdTextField" destination="yFq-dY-ksl" id="WUG-mm-E23"/>
+                        <outlet property="semesterDatePicker" destination="Zwm-dH-OcA" id="Bhg-Ui-OZ8"/>
+                        <outlet property="setDateManually" destination="6pk-ye-WBV" id="AMb-XU-fq3"/>
                         <outlet property="xhTextField" destination="eQS-kb-T8U" id="jPg-PN-5QH"/>
+                        <outlet property="xnxqPickerView" destination="RDJ-3b-HZO" id="9Gc-O2-Mqa"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzN-ts-Mvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -393,11 +400,11 @@
             </objects>
             <point key="canvasLocation" x="87" y="3480"/>
         </scene>
-        <!--Courses-->
+        <!--个人课表-->
         <scene sceneID="y6z-J3-Dgn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IAV-mk-iee" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Courses" image="list-simple-7" id="Fj0-Gz-9sC"/>
+                    <tabBarItem key="tabBarItem" title="个人课表" image="list-simple-7" id="Fj0-Gz-9sC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ep9-gF-pPr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -412,11 +419,11 @@
             </objects>
             <point key="canvasLocation" x="941" y="725"/>
         </scene>
-        <!--Setings-->
+        <!--设置-->
         <scene sceneID="gnb-QI-7Av">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x4T-I3-jIk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setings" image="gear-7" id="ZKQ-bq-Ike"/>
+                    <tabBarItem key="tabBarItem" title="设置" image="gear-7" id="ZKQ-bq-Ike"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BX9-kR-xBi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -458,11 +465,11 @@
             </objects>
             <point key="canvasLocation" x="1753" y="2742"/>
         </scene>
-        <!--Attending-->
+        <!--修读课程-->
         <scene sceneID="EhX-XE-dw9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cR2-eP-0Su" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Attending" image="file-list-tick-7" id="Goc-ee-KFN"/>
+                    <tabBarItem key="tabBarItem" title="修读课程" image="file-list-tick-7" id="Goc-ee-KFN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bdI-nM-fSR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -477,7 +484,7 @@
             </objects>
             <point key="canvasLocation" x="941" y="2742"/>
         </scene>
-        <!--Exam-->
+        <!--考试安排-->
         <scene sceneID="Tob-u4-M3e">
             <objects>
                 <viewController id="R7e-eD-lsG" customClass="ExamListViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -502,7 +509,7 @@
                             <constraint firstItem="fAB-OZ-1uQ" firstAttribute="bottom" secondItem="ahO-tz-JfW" secondAttribute="top" id="ad0-pZ-G1L"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Exam" image="note-write-7" id="6rQ-Xh-Fml"/>
+                    <tabBarItem key="tabBarItem" title="考试安排" image="note-write-7" id="6rQ-Xh-Fml"/>
                     <connections>
                         <outlet property="webView" destination="fAB-OZ-1uQ" id="DRi-IP-GGI"/>
                     </connections>

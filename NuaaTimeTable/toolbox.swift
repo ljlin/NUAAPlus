@@ -20,3 +20,10 @@ func <== (to:NSObject, rig:(from:NSObject, keys:[String])){
         to.setValue(rig.from.valueForKey(key), forKeyPath: key)
     }
 }
+
+func <== (to:NSObject, from:[String:AnyObject?]){
+    for (key,value) in from {
+        to.setValue(value, forKeyPath:key)
+    }
+}
+

@@ -9,23 +9,42 @@
 import UIKit
 
 class UserInfoSettingTableViewController: UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+    
     @IBOutlet weak var xhTextField : UITextField!
     @IBOutlet weak var pwdTextField : UITextField!
+    @IBOutlet weak var xnxqPickerView: UIPickerView!
+    @IBOutlet weak var setDateManually: UISwitch!
+    @IBOutlet weak var semesterDatePicker: UIDatePicker!
     
     var engine = DedEngine.sharedInstance
     var delegate : LoginDelegate? = nil
-
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.xnxqPickerView.selectRow(1, inComponent: 0, animated: true)
+        self.xnxqPickerView.selectRow(0, inComponent: 1, animated: true)
+        self.setDateManually.setOn(false, animated: true)
+        self.xn = self.xnArray[1]
+        self.xq = self.xqArray[0]
+    }
     @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
-        println(self.xhTextField.text)
-        println(self.pwdTextField.text)
+        var userInfo = DEDUserInfo()
+        userInfo <== [
+            "xh"  : self.xhTextField.text,
+            "pwd" : self.pwdTextField.text,
+            "xn"  : self.xn,
+            "xq"  : self.xq,
+            "setSemesterDateManually" : self.setDateManually.on,
+            "semesterDate" : self.semesterDatePicker.date
+        ]
+        self.engine.userInfo = userInfo
     }
     
     //PickerView
     let xnArray = ["2013-2014","2014-2015","2015-2016","2016-2017"]
     let xqArray = ["1","2"]
-    var xn = String()
-    var xq = String()
+    var xn = "hehe"
+    var xq = "haha"
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 2
     }
