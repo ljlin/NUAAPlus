@@ -9,12 +9,12 @@
 import UIKit
 
 
-protocol loginDelegate {
+protocol LoginDelegate {
     func GetCourseTableByXh(xh : String,xn : String, xq : String)
 }
 
-class loginViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
-    var delegate : loginDelegate? = nil
+class LoginViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+    var delegate : LoginDelegate? = nil
     @IBOutlet weak var xhTextField: UITextField!
     
     override func viewDidLoad() {

@@ -1,5 +1,5 @@
 //
-//  courseInfo.swift
+//  CourseInfo.swift
 //  NuaaTimeTable
 //
 //  Created by ljlin on 15/2/13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class courseInfo: NSObject {
+class CourseInfo: NSObject {
     
     var kcm    = String()
     var jsm    = String()
@@ -26,15 +26,15 @@ class courseInfo: NSObject {
     class func keys() -> [String] {
         return ["kcm","jsm","xiaoqu","roomid","week","unit","weeks","title","location","time"]
     }
-    class func keysForStringProperty() -> [String] { return Array(courseInfo.keys()[0...3])}
-    class func keysForIntProperty()    -> [String] { return Array(courseInfo.keys()[4...5])}
+    class func keysForStringProperty() -> [String] { return Array(CourseInfo.keys()[0...3])}
+    class func keysForIntProperty()    -> [String] { return Array(CourseInfo.keys()[4...5])}
     
     init(XML:AEXMLElement) {
         super.init()
-        for key in courseInfo.keysForStringProperty() {
+        for key in CourseInfo.keysForStringProperty() {
             self.setValue(XML[key].value, forKeyPath: key)
         }
-        for key in courseInfo.keysForIntProperty(){
+        for key in CourseInfo.keysForIntProperty(){
             self.setValue(XML[key].value.toInt(), forKeyPath: key)
         }
         var weekStringArray : [String] = XML["weeks"].value.componentsSeparatedByString(",")

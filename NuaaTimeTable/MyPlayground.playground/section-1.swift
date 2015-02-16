@@ -59,6 +59,17 @@ for t in infos {
     println(t.kcm)
 }
 
+class human : NSObject {
+    lazy var name = String();
+    override init() {
+        super.init()
+        self.name = "haha"
+    }
+    func hello() {
+        println(self.name)
+    }
+}
 
+var t = human()
 
 

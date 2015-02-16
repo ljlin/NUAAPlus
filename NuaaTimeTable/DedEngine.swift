@@ -12,8 +12,9 @@ import EventKit
 typealias SuccessHandler = ()->()
 
 class DedEngine {
-    var courses = [courseInfo]()
+    var courses = [CourseInfo]()
     var eventStore = EKEventStore()
+
     func GetCourseTableByXh(xh : String,xn : String, xq : String, success : SuccessHandler) {
         NSLog("querry = \(xh)")
         self.courses.removeAll()
@@ -40,7 +41,7 @@ class DedEngine {
         if (error != nil) { NSLog("%@", error!.description) }
         if let xml = xmldoc{
             for child in xml["soap:Envelope"]["soap:Body"]["GetCourseTableByXhResponse"]["GetCourseTableByXhResult"]["diffgr:diffgram"]["NewDataSet"].children {
-                courses.append(courseInfo(XML: child))
+                courses.append(CourseInfo(XML: child))
             }
         }
 

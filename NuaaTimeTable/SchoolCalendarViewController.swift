@@ -1,5 +1,5 @@
 //
-//  schoolCalendarViewController.swift
+//  SchoolCalendarViewController.swift
 //  NuaaTimeTable
 //
 //  Created by ljlin on 15/2/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class schoolCalendarViewController: UIViewController {
+class SchoolCalendarViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad();

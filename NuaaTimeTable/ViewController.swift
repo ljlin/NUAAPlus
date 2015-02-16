@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController,loginDelegate {
+class ViewController: UITableViewController,LoginDelegate {
     var engine = DedEngine()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class ViewController: UITableViewController,loginDelegate {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "loginSegue"){
-            var destination = segue.destinationViewController as loginViewController
+            var destination = segue.destinationViewController as LoginViewController
             destination.delegate = self
         }
     }
@@ -33,13 +33,13 @@ class ViewController: UITableViewController,loginDelegate {
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier: String = "courseInfoCellIdentifier"
-        var cell: courseInfoCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as courseInfoCell?
+        var cell: CourseInfoCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as CourseInfoCell?
         if cell == nil {
-            cell = courseInfoCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
+            cell = CourseInfoCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
         }
 
         let course = self.engine.courses[indexPath.row]
-        for key in courseInfoCell.keys() {
+        for key in CourseInfoCell.keys() {
             cell?.setValue(course.valueForKey(key)!, forKeyPath:key+".text")
         }
         return cell!

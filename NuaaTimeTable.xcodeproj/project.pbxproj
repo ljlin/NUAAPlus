@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF4600A51A8D977C007C0BC3 /* courseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A41A8D977C007C0BC3 /* courseInfo.swift */; };
+		BF2ED1771A92221C0030482C /* UserInfoSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */; };
+		BF2ED1791A922BA90030482C /* ExamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1781A922BA90030482C /* ExamListViewController.swift */; };
+		BF2ED17B1A922D900030482C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED17A1A922D900030482C /* UserInfo.swift */; };
+		BF4600A51A8D977C007C0BC3 /* CourseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A41A8D977C007C0BC3 /* CourseInfo.swift */; };
 		BF4600A81A8F486A007C0BC3 /* toolbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A71A8F4869007C0BC3 /* toolbox.swift */; };
-		BF4625B81A7CF85700A65495 /* courseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4625B71A7CF85700A65495 /* courseInfoCell.swift */; };
-		BF5882511A8FB9DC00B1E571 /* schoolCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5882501A8FB9DC00B1E571 /* schoolCalendarViewController.swift */; };
+		BF4625B81A7CF85700A65495 /* CourseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4625B71A7CF85700A65495 /* CourseInfoCell.swift */; };
+		BF5882511A8FB9DC00B1E571 /* SchoolCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5882501A8FB9DC00B1E571 /* SchoolCalendarViewController.swift */; };
 		BF9409401A18C4FD00160BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */; };
 		BF9409421A18C4FD00160BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409411A18C4FD00160BB6 /* ViewController.swift */; };
 		BF9409451A18C4FD00160BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9409431A18C4FD00160BB6 /* Main.storyboard */; };
@@ -41,7 +44,7 @@
 		BF9409A71A18C90A00160BB6 /* NuaaDedWebService.xml in Resources */ = {isa = PBXBuildFile; fileRef = BF9409A51A18C90A00160BB6 /* NuaaDedWebService.xml */; };
 		BF9409AD1A18CB7500160BB6 /* DedEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AC1A18CB7500160BB6 /* DedEngine.swift */; };
 		BF9409AF1A18CC3100160BB6 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AE1A18CC3100160BB6 /* AEXML.swift */; };
-		BF9409B31A18D87300160BB6 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409B21A18D87300160BB6 /* loginViewController.swift */; };
+		BF9409B31A18D87300160BB6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409B21A18D87300160BB6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BF4600A41A8D977C007C0BC3 /* courseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseInfo.swift; sourceTree = "<group>"; };
+		BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoSettingTableViewController.swift; sourceTree = "<group>"; };
+		BF2ED1781A922BA90030482C /* ExamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListViewController.swift; sourceTree = "<group>"; };
+		BF2ED17A1A922D900030482C /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BF4600A41A8D977C007C0BC3 /* CourseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseInfo.swift; sourceTree = "<group>"; };
 		BF4600A61A8F2CC4007C0BC3 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		BF4600A71A8F4869007C0BC3 /* toolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toolbox.swift; sourceTree = "<group>"; };
-		BF4625B71A7CF85700A65495 /* courseInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseInfoCell.swift; sourceTree = "<group>"; };
-		BF5882501A8FB9DC00B1E571 /* schoolCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schoolCalendarViewController.swift; sourceTree = "<group>"; };
+		BF4625B71A7CF85700A65495 /* CourseInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseInfoCell.swift; sourceTree = "<group>"; };
+		BF5882501A8FB9DC00B1E571 /* SchoolCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCalendarViewController.swift; sourceTree = "<group>"; };
 		BF94093A1A18C4FD00160BB6 /* NuaaTimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuaaTimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF94093E1A18C4FD00160BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +122,7 @@
 		BF9409A51A18C90A00160BB6 /* NuaaDedWebService.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NuaaDedWebService.xml; sourceTree = "<group>"; };
 		BF9409AC1A18CB7500160BB6 /* DedEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DedEngine.swift; sourceTree = "<group>"; };
 		BF9409AE1A18CC3100160BB6 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
-		BF9409B21A18D87300160BB6 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		BF9409B21A18D87300160BB6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9409431A18C4FD00160BB6 /* Main.storyboard */,
-				BF4625B71A7CF85700A65495 /* courseInfoCell.swift */,
+				BF4625B71A7CF85700A65495 /* CourseInfoCell.swift */,
 			);
 			name = VIew;
 			sourceTree = "<group>";
@@ -322,7 +328,8 @@
 			isa = PBXGroup;
 			children = (
 				BF9409AC1A18CB7500160BB6 /* DedEngine.swift */,
-				BF4600A41A8D977C007C0BC3 /* courseInfo.swift */,
+				BF2ED17A1A922D900030482C /* UserInfo.swift */,
+				BF4600A41A8D977C007C0BC3 /* CourseInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -331,8 +338,10 @@
 			isa = PBXGroup;
 			children = (
 				BF9409411A18C4FD00160BB6 /* ViewController.swift */,
-				BF5882501A8FB9DC00B1E571 /* schoolCalendarViewController.swift */,
-				BF9409B21A18D87300160BB6 /* loginViewController.swift */,
+				BF5882501A8FB9DC00B1E571 /* SchoolCalendarViewController.swift */,
+				BF2ED1781A922BA90030482C /* ExamListViewController.swift */,
+				BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */,
+				BF9409B21A18D87300160BB6 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -448,19 +457,22 @@
 				BF9409AF1A18CC3100160BB6 /* AEXML.swift in Sources */,
 				BF94098F1A18C5CF00160BB6 /* AFJSONRequestOperation.m in Sources */,
 				BF94099C1A18C5CF00160BB6 /* SoapUtility.m in Sources */,
-				BF4625B81A7CF85700A65495 /* courseInfoCell.swift in Sources */,
-				BF4600A51A8D977C007C0BC3 /* courseInfo.swift in Sources */,
+				BF4625B81A7CF85700A65495 /* CourseInfoCell.swift in Sources */,
+				BF2ED17B1A922D900030482C /* UserInfo.swift in Sources */,
+				BF4600A51A8D977C007C0BC3 /* CourseInfo.swift in Sources */,
 				BF9409971A18C5CF00160BB6 /* DDXMLDocument.m in Sources */,
 				BF9409991A18C5CF00160BB6 /* DDXMLNode.m in Sources */,
-				BF5882511A8FB9DC00B1E571 /* schoolCalendarViewController.swift in Sources */,
+				BF5882511A8FB9DC00B1E571 /* SchoolCalendarViewController.swift in Sources */,
+				BF2ED1791A922BA90030482C /* ExamListViewController.swift in Sources */,
 				BF9409921A18C5CF00160BB6 /* AFURLConnectionOperation.m in Sources */,
 				BF9409961A18C5CF00160BB6 /* NSString+DDXML.m in Sources */,
 				BF9409421A18C4FD00160BB6 /* ViewController.swift in Sources */,
-				BF9409B31A18D87300160BB6 /* loginViewController.swift in Sources */,
+				BF9409B31A18D87300160BB6 /* LoginViewController.swift in Sources */,
 				BF9409981A18C5CF00160BB6 /* DDXMLElement.m in Sources */,
 				BF9409931A18C5CF00160BB6 /* AFXMLRequestOperation.m in Sources */,
 				BF9409401A18C4FD00160BB6 /* AppDelegate.swift in Sources */,
 				BF94099A1A18C5CF00160BB6 /* DDXMLElement+WSDL.m in Sources */,
+				BF2ED1771A92221C0030482C /* UserInfoSettingTableViewController.swift in Sources */,
 				BF9409951A18C5CF00160BB6 /* DDXMLElementAdditions.m in Sources */,
 				BF9409901A18C5CF00160BB6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				BF9409AD1A18CB7500160BB6 /* DedEngine.swift in Sources */,
@@ -599,6 +611,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -617,6 +630,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

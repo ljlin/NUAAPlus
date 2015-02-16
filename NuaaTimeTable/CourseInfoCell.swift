@@ -1,5 +1,5 @@
 //
-//  courseInfoCell.swift
+//  CourseInfoCell.swift
 //  NuaaTimeTable
 //
 //  Created by ljlin on 14/11/3.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class courseInfoCell : UITableViewCell {
+class CourseInfoCell : UITableViewCell {
     @IBOutlet weak var kcm: UILabel!
     @IBOutlet weak var jsm: UILabel!
     @IBOutlet weak var time: UILabel!
