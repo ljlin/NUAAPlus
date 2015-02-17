@@ -1,3 +1,6 @@
 [submodule "Async"]
 	path = Async
 	url = https://github.com/duemunk/Async
+[submodule "Dollar.swift"]
+	path = Dollar.swift
+	url = https://github.com/ankurp/Dollar.swift.git
