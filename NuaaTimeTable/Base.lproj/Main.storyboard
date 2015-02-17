@@ -211,12 +211,12 @@
         <scene sceneID="Z4B-G0-Ys9">
             <objects>
                 <tableViewController id="oL2-zX-rya" customClass="UserInfoSettingTableViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BVF-Fv-3t0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BVF-Fv-3t0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="学号密码" id="hgj-P5-qe5">
+                            <tableViewSection id="hgj-P5-qe5">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Bwi-eh-RIT">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -277,16 +277,25 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="学年学期" id="FbB-06-s1f">
+                            <tableViewSection id="FbB-06-s1f">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="128" id="Db1-sb-6Xn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="158" id="Db1-sb-6Xn">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Db1-sb-6Xn" id="C3c-a6-B7q">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学年学期" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSs-Y5-ucO">
+                                                    <rect key="frame" x="266" y="8" width="68" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="pil-6u-pxW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-3b-HZO">
-                                                    <rect key="frame" x="0.0" y="-21.5" width="600" height="162"/>
+                                                    <rect key="frame" x="0.0" y="8.5" width="600" height="162"/>
                                                     <connections>
                                                         <outlet property="dataSource" destination="oL2-zX-rya" id="acX-6F-G3A"/>
                                                         <outlet property="delegate" destination="oL2-zX-rya" id="97A-2f-PRm"/>
@@ -294,16 +303,18 @@
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="top" secondItem="C3c-a6-B7q" secondAttribute="top" id="ADd-cI-QOU"/>
-                                                <constraint firstAttribute="trailing" secondItem="RDJ-3b-HZO" secondAttribute="trailing" id="Iuq-Ow-M5i"/>
-                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="leading" secondItem="C3c-a6-B7q" secondAttribute="leading" id="Nm1-X9-ppZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="RDJ-3b-HZO" secondAttribute="bottom" id="tcG-zg-9wo"/>
+                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="leading" secondItem="C3c-a6-B7q" secondAttribute="leading" id="66T-PP-2eq"/>
+                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="top" secondItem="PSs-Y5-ucO" secondAttribute="bottom" id="cZM-y0-KyQ"/>
+                                                <constraint firstItem="PSs-Y5-ucO" firstAttribute="top" secondItem="C3c-a6-B7q" secondAttribute="topMargin" id="jZg-5J-GHp"/>
+                                                <constraint firstAttribute="trailing" secondItem="RDJ-3b-HZO" secondAttribute="trailing" id="ujG-a4-Tgr"/>
+                                                <constraint firstItem="RDJ-3b-HZO" firstAttribute="centerX" secondItem="PSs-Y5-ucO" secondAttribute="centerX" id="xat-O0-wDk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RDJ-3b-HZO" secondAttribute="bottom" id="ziM-mp-nSC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="学期首日" id="DKd-0q-sWx">
+                            <tableViewSection id="DKd-0q-sWx">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xkd-Uw-cdb">
                                         <autoresizingMask key="autoresizingMask"/>

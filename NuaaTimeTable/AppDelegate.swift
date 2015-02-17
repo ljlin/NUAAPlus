@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        SVProgressHUD.setBackgroundColor(UIColor(red: 100/255, green: 200/255, blue: 255/255, alpha: 0.5))
-
+        //SVProgressHUD.setBackgroundColor(UIColor(red: 100/255, green: 200/255, blue: 255/255, alpha: 0.5))
+        SVProgressHUD.setBackgroundColor(UIColor.grayColor().colorWithAlphaComponent(0.3))
         return true
     }
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		88C0670C6DE95CB0ACAA2FA6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5AA2B056B40F68B5568D9B /* libPods.a */; };
 		BF2ED1771A92221C0030482C /* UserInfoSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */; };
 		BF2ED1791A922BA90030482C /* ExamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1781A922BA90030482C /* ExamListViewController.swift */; };
 		BF2ED17B1A922D900030482C /* DEDUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED17A1A922D900030482C /* DEDUserInfo.swift */; };
@@ -46,6 +45,11 @@
 		BF9409AD1A18CB7500160BB6 /* DedEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AC1A18CB7500160BB6 /* DedEngine.swift */; };
 		BF9409AF1A18CC3100160BB6 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AE1A18CC3100160BB6 /* AEXML.swift */; };
 		BF9409B31A18D87300160BB6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409B21A18D87300160BB6 /* LoginViewController.swift */; };
+		BFB1C8AB1A93A1DC009E8040 /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8AA1A93A1CE009E8040 /* libSVProgressHUD.a */; };
+		BFB1C8B51A93A228009E8040 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1C8B01A93A228009E8040 /* SVIndefiniteAnimatedView.m */; };
+		BFB1C8B71A93A228009E8040 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1C8B41A93A228009E8040 /* SVProgressHUD.m */; };
+		BFB1C8B91A93A245009E8040 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8B81A93A245009E8040 /* QuartzCore.framework */; };
+		BFB1C8BA1A93A251009E8040 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFB1C8B21A93A228009E8040 /* SVProgressHUD.bundle */; };
 		BFFB073E1A925747008EFE01 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB073D1A925747008EFE01 /* Async.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,16 +61,36 @@
 			remoteGlobalIDString = BF9409391A18C4FD00160BB6;
 			remoteInfo = NuaaTimeTable;
 		};
+		BFB1C8A91A93A1CE009E8040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFB1C8A51A93A1CE009E8040 /* SVProgressHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65F021FC15C857EF0030BBEF;
+			remoteInfo = SVProgressHUD;
+		};
+		BFB1C8C01A93A2EB009E8040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92E0D03C19467C67002ACC3D;
+			remoteInfo = Dollar;
+		};
+		BFB1C8C21A93A2EB009E8040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92E6686F19F09C6400BB4FB8;
+			remoteInfo = DollarTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B540C8864044B7DDEAEBA9D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoSettingTableViewController.swift; sourceTree = "<group>"; };
 		BF2ED1781A922BA90030482C /* ExamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListViewController.swift; sourceTree = "<group>"; };
 		BF2ED17A1A922D900030482C /* DEDUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEDUserInfo.swift; sourceTree = "<group>"; };
 		BF4600A41A8D977C007C0BC3 /* DEDCourseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEDCourseInfo.swift; sourceTree = "<group>"; };
 		BF4600A61A8F2CC4007C0BC3 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
-		BF4600A71A8F4869007C0BC3 /* toolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toolbox.swift; sourceTree = "<group>"; };
+		BF4600A71A8F4869007C0BC3 /* toolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = toolbox.swift; path = NuaaTimeTable/toolbox.swift; sourceTree = "<group>"; };
 		BF4625B71A7CF85700A65495 /* CourseInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseInfoCell.swift; sourceTree = "<group>"; };
 		BF5882501A8FB9DC00B1E571 /* SchoolCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolCalendarViewController.swift; sourceTree = "<group>"; };
 		BF94093A1A18C4FD00160BB6 /* NuaaTimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuaaTimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,11 +148,18 @@
 		BF9409A41A18C90A00160BB6 /* ljlinCourseInfo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ljlinCourseInfo.xml; sourceTree = "<group>"; };
 		BF9409A51A18C90A00160BB6 /* NuaaDedWebService.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NuaaDedWebService.xml; sourceTree = "<group>"; };
 		BF9409AC1A18CB7500160BB6 /* DedEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DedEngine.swift; sourceTree = "<group>"; };
-		BF9409AE1A18CC3100160BB6 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
+		BF9409AE1A18CC3100160BB6 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AEXML.swift; path = NuaaTimeTable/AEXML.swift; sourceTree = "<group>"; };
 		BF9409B21A18D87300160BB6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BFFB073D1A925747008EFE01 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
-		F010A59E7DD049082B03DACF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FC5AA2B056B40F68B5568D9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB1C8A51A93A1CE009E8040 /* SVProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SVProgressHUD.xcodeproj; path = SVProgressHUD/SVProgressHUD.xcodeproj; sourceTree = "<group>"; };
+		BFB1C8AF1A93A228009E8040 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		BFB1C8B01A93A228009E8040 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		BFB1C8B11A93A228009E8040 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		BFB1C8B21A93A228009E8040 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		BFB1C8B31A93A228009E8040 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		BFB1C8B41A93A228009E8040 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		BFB1C8B81A93A245009E8040 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dollar.xcodeproj; path = Dollar.swift/Dollar/Dollar.xcodeproj; sourceTree = "<group>"; };
+		BFFB073D1A925747008EFE01 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Async.swift; path = NuaaTimeTable/Async.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,10 +167,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB1C8B91A93A245009E8040 /* QuartzCore.framework in Frameworks */,
+				BFB1C8AB1A93A1DC009E8040 /* libSVProgressHUD.a in Frameworks */,
 				BF9409A21A18C7E500160BB6 /* libxml2.2.dylib in Frameworks */,
 				BF9409A01A18C7DC00160BB6 /* SystemConfiguration.framework in Frameworks */,
 				BF94099E1A18C7A600160BB6 /* MobileCoreServices.framework in Frameworks */,
-				88C0670C6DE95CB0ACAA2FA6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,23 +185,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7C60C1F10057E716A4D9FF7F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B540C8864044B7DDEAEBA9D8 /* Pods.debug.xcconfig */,
-				F010A59E7DD049082B03DACF /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		BF9409311A18C4FD00160BB6 = {
 			isa = PBXGroup;
 			children = (
 				BF94093C1A18C4FD00160BB6 /* NuaaTimeTable */,
 				BF9409521A18C4FD00160BB6 /* NuaaTimeTableTests */,
 				BF94093B1A18C4FD00160BB6 /* Products */,
-				7C60C1F10057E716A4D9FF7F /* Pods */,
-				F7C346727571CE78615B1591 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,16 +207,14 @@
 			isa = PBXGroup;
 			children = (
 				BF4600A61A8F2CC4007C0BC3 /* MyPlayground.playground */,
-				BF9409A81A18C92700160BB6 /* Class */,
 				BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */,
 				BF9409AA1A18CB4800160BB6 /* Model */,
 				BF9409A91A18CB3D00160BB6 /* VIew */,
 				BF9409AB1A18CB5100160BB6 /* Controller */,
 				BF9409461A18C4FD00160BB6 /* Images.xcassets */,
-				BF9409481A18C4FD00160BB6 /* LaunchScreen.xib */,
 				BF94093D1A18C4FD00160BB6 /* Supporting Files */,
 				BF94095F1A18C5AA00160BB6 /* Bridging.h */,
-				BF9409A31A18C84000160BB6 /* framework */,
+				BF9409A31A18C84000160BB6 /* Framework */,
 			);
 			path = NuaaTimeTable;
 			sourceTree = "<group>";
@@ -250,7 +269,8 @@
 				BF9409721A18C5CF00160BB6 /* UIImageView+AFNetworking.h */,
 				BF9409731A18C5CF00160BB6 /* UIImageView+AFNetworking.m */,
 			);
-			path = AFNetworking;
+			name = AFNetworking;
+			path = NuaaTimeTable/AFNetworking;
 			sourceTree = "<group>";
 		};
 		BF9409741A18C5CF00160BB6 /* KissXML */ = {
@@ -267,7 +287,8 @@
 				BF9409811A18C5CF00160BB6 /* DDXMLNode.m */,
 				BF9409821A18C5CF00160BB6 /* Private */,
 			);
-			path = KissXML;
+			name = KissXML;
+			path = NuaaTimeTable/KissXML;
 			sourceTree = "<group>";
 		};
 		BF9409751A18C5CF00160BB6 /* Additions */ = {
@@ -307,36 +328,35 @@
 				BF94098A1A18C5CF00160BB6 /* SoapUtility.h */,
 				BF94098B1A18C5CF00160BB6 /* SoapUtility.m */,
 			);
-			path = SoapUtility;
+			name = SoapUtility;
+			path = NuaaTimeTable/SoapUtility;
 			sourceTree = "<group>";
 		};
-		BF9409A31A18C84000160BB6 /* framework */ = {
+		BF9409A31A18C84000160BB6 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				BF9409A11A18C7E500160BB6 /* libxml2.2.dylib */,
-				BF94099F1A18C7DC00160BB6 /* SystemConfiguration.framework */,
-				BF94099D1A18C7A600160BB6 /* MobileCoreServices.framework */,
-			);
-			name = framework;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		BF9409A81A18C92700160BB6 /* Class */ = {
-			isa = PBXGroup;
-			children = (
+				BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */,
+				BFB1C8B81A93A245009E8040 /* QuartzCore.framework */,
+				BFB1C8AE1A93A228009E8040 /* SVProgressHUD */,
+				BFB1C8A51A93A1CE009E8040 /* SVProgressHUD.xcodeproj */,
 				BFFB073D1A925747008EFE01 /* Async.swift */,
 				BF4600A71A8F4869007C0BC3 /* toolbox.swift */,
 				BF9409AE1A18CC3100160BB6 /* AEXML.swift */,
 				BF9409601A18C5CF00160BB6 /* AFNetworking */,
 				BF9409741A18C5CF00160BB6 /* KissXML */,
 				BF9409841A18C5CF00160BB6 /* SoapUtility */,
+				BF9409A11A18C7E500160BB6 /* libxml2.2.dylib */,
+				BF94099F1A18C7DC00160BB6 /* SystemConfiguration.framework */,
+				BF94099D1A18C7A600160BB6 /* MobileCoreServices.framework */,
 			);
-			name = Class;
+			name = Framework;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		BF9409A91A18CB3D00160BB6 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				BF9409481A18C4FD00160BB6 /* LaunchScreen.xib */,
 				BF9409431A18C4FD00160BB6 /* Main.storyboard */,
 				BF4625B71A7CF85700A65495 /* CourseInfoCell.swift */,
 			);
@@ -365,12 +385,35 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		F7C346727571CE78615B1591 /* Frameworks */ = {
+		BFB1C8A61A93A1CE009E8040 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC5AA2B056B40F68B5568D9B /* libPods.a */,
+				BFB1C8AA1A93A1CE009E8040 /* libSVProgressHUD.a */,
 			);
-			name = Frameworks;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFB1C8AE1A93A228009E8040 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BFB1C8AF1A93A228009E8040 /* SVIndefiniteAnimatedView.h */,
+				BFB1C8B01A93A228009E8040 /* SVIndefiniteAnimatedView.m */,
+				BFB1C8B11A93A228009E8040 /* SVProgressHUD-Prefix.pch */,
+				BFB1C8B21A93A228009E8040 /* SVProgressHUD.bundle */,
+				BFB1C8B31A93A228009E8040 /* SVProgressHUD.h */,
+				BFB1C8B41A93A228009E8040 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = SVProgressHUD/SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		BFB1C8BC1A93A2EB009E8040 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFB1C8C11A93A2EB009E8040 /* Dollar.framework */,
+				BFB1C8C31A93A2EB009E8040 /* DollarTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,11 +423,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NuaaTimeTable" */;
 			buildPhases = (
-				177BE116895B8E92451DA189 /* Check Pods Manifest.lock */,
 				BF9409361A18C4FD00160BB6 /* Sources */,
 				BF9409371A18C4FD00160BB6 /* Frameworks */,
 				BF9409381A18C4FD00160BB6 /* Resources */,
-				69F05F4FF43F7CB8D874B206 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -443,6 +484,16 @@
 			mainGroup = BF9409311A18C4FD00160BB6;
 			productRefGroup = BF94093B1A18C4FD00160BB6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BFB1C8BC1A93A2EB009E8040 /* Products */;
+					ProjectRef = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
+				},
+				{
+					ProductGroup = BFB1C8A61A93A1CE009E8040 /* Products */;
+					ProjectRef = BFB1C8A51A93A1CE009E8040 /* SVProgressHUD.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BF9409391A18C4FD00160BB6 /* NuaaTimeTable */,
@@ -451,11 +502,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		BFB1C8AA1A93A1CE009E8040 /* libSVProgressHUD.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSVProgressHUD.a;
+			remoteRef = BFB1C8A91A93A1CE009E8040 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFB1C8C11A93A2EB009E8040 /* Dollar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Dollar.framework;
+			remoteRef = BFB1C8C01A93A2EB009E8040 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFB1C8C31A93A2EB009E8040 /* DollarTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DollarTests.xctest;
+			remoteRef = BFB1C8C21A93A2EB009E8040 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		BF9409381A18C4FD00160BB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB1C8BA1A93A251009E8040 /* SVProgressHUD.bundle in Resources */,
 				BF9409A61A18C90A00160BB6 /* ljlinCourseInfo.xml in Resources */,
 				BF9409451A18C4FD00160BB6 /* Main.storyboard in Resources */,
 				BF94094A1A18C4FD00160BB6 /* LaunchScreen.xib in Resources */,
@@ -473,39 +549,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		177BE116895B8E92451DA189 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		69F05F4FF43F7CB8D874B206 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		BF9409361A18C4FD00160BB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -520,8 +563,10 @@
 				BF94098F1A18C5CF00160BB6 /* AFJSONRequestOperation.m in Sources */,
 				BF94099C1A18C5CF00160BB6 /* SoapUtility.m in Sources */,
 				BF4625B81A7CF85700A65495 /* CourseInfoCell.swift in Sources */,
+				BFB1C8B71A93A228009E8040 /* SVProgressHUD.m in Sources */,
 				BF2ED17B1A922D900030482C /* DEDUserInfo.swift in Sources */,
 				BF4600A51A8D977C007C0BC3 /* DEDCourseInfo.swift in Sources */,
+				BFB1C8B51A93A228009E8040 /* SVIndefiniteAnimatedView.m in Sources */,
 				BF9409971A18C5CF00160BB6 /* DDXMLDocument.m in Sources */,
 				BF9409991A18C5CF00160BB6 /* DDXMLNode.m in Sources */,
 				BF5882511A8FB9DC00B1E571 /* SchoolCalendarViewController.swift in Sources */,
@@ -661,7 +706,6 @@
 		};
 		BF94095A1A18C4FD00160BB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B540C8864044B7DDEAEBA9D8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -681,7 +725,6 @@
 		};
 		BF94095B1A18C4FD00160BB6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F010A59E7DD049082B03DACF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

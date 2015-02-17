@@ -10,7 +10,6 @@ import UIKit
 
 class CourseTableViewController: UITableViewController {
     var engine = DedEngine.sharedInstance
-    
     @IBAction func getButtonClicked(sender: AnyObject) {
         SVProgressHUD.show()
         var res = true
@@ -23,8 +22,6 @@ class CourseTableViewController: UITableViewController {
             else {
                 SVProgressHUD.showErrorWithStatus("导入失败")
             }
-            //SVProgressHUD.dismiss()
-            println(res)
             self.tableView.reloadData()
         })
     }
@@ -33,7 +30,6 @@ class CourseTableViewController: UITableViewController {
             self.engine.importEvents()
         })
     }
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.engine.courses.count;
     }
@@ -43,14 +39,11 @@ class CourseTableViewController: UITableViewController {
         if cell == nil {
             cell = CourseInfoCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
         }
-
         let course = self.engine.courses[indexPath.row]
         for key in CourseInfoCell.keys() {
             cell?.setValue(course.valueForKey(key)!, forKeyPath:key+".text")
         }
         return cell!
     }
-
-
 }
 

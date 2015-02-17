@@ -4,3 +4,6 @@
 [submodule "Dollar.swift"]
 	path = Dollar.swift
 	url = https://github.com/ankurp/Dollar.swift.git
+[submodule "SVProgressHUD"]
+	path = SVProgressHUD
+	url = https://github.com/TransitApp/SVProgressHUD
