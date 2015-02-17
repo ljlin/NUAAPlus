@@ -38,6 +38,9 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
             "semesterDate" : self.semesterDatePicker.date
         ]
         self.engine.userInfo = userInfo
+        SVProgressHUD.showSuccessWithStatus("保存成功")
+        self.xhTextField.resignFirstResponder()
+        self.pwdTextField.resignFirstResponder()
     }
     
     //PickerView

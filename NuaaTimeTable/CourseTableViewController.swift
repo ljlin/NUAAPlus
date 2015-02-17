@@ -17,7 +17,13 @@ class CourseTableViewController: UITableViewController {
         Async.background({
             res = self.engine.GetCourseTableBySettings()
         }).main({
-            SVProgressHUD.dismiss()
+            if(res){
+                SVProgressHUD.showSuccessWithStatus("导入成功")
+            }
+            else {
+                SVProgressHUD.showErrorWithStatus("导入失败")
+            }
+            //SVProgressHUD.dismiss()
             println(res)
             self.tableView.reloadData()
         })
