@@ -8,8 +8,9 @@
 
 import Foundation
 import EventKit
+import Dollar
 
-typealias SuccessHandler = ()->()
+//typealias Success = ()->()
 
 class DedEngine : NSObject {
     var courses = [DEDCourseInfo]()
@@ -21,16 +22,42 @@ class DedEngine : NSObject {
         }
         return Singleton.instance
     }
-    func GetCourseTableBySettings() -> Bool {
+    lazy var calendarDic = DedEngine.sharedInstance.getCalendarDictionary()
+
+    func requestAccessToEKEntityTypeEvent(success:SuccessBlock) {
+        if(EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) == EKAuthorizationStatus.Authorized){
+            success("")
+        }
+        else {
+            self.eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:{(granted:Bool, error:NSError?) in
+                if(granted){
+                    success("")
+                }
+                else{
+                    SVProgressHUD.showErrorWithStatus("请在程序允许方法日历")
+                }
+            })
+        }
+    }
+    func getCalendarDictionary() -> [String:EKCalendar] {
+        var calendarDic : [String:EKCalendar] = [:]
+        self.requestAccessToEKEntityTypeEvent({(_) in
+            for cal in self.eventStore.calendarsForEntityType(EKEntityTypeEvent) {
+                calendarDic[cal.title!! as String ] = (cal as EKCalendar)
+            }
+        })
+        return calendarDic
+    }
+    func getCourseTableBySettings() -> Bool {
         if let user = userInfo {
-            self.GetCourseTableByXh(user.xh, xn: user.xn, xq: user.xq)
+            self.getCourseTableByXh(user.xh, xn: user.xn, xq: user.xq)
             return true;
         }
         else {
             return false;
         }
     }
-    func GetCourseTableByXh(xh : String,xn : String, xq : String) {
+    func getCourseTableByXh(xh : String,xn : String, xq : String) {
         NSLog("querry = \(xh)")
         self.courses.removeAll()
         let dic = ["xn":xn,"xq":xq,"xh":xh]
@@ -55,17 +82,22 @@ class DedEngine : NSObject {
         }
 
     }
-    
+
     func importEvents(){
-        self.eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:{(granted:Bool, error:NSError?) in
-            dispatch_async(dispatch_get_main_queue(), {
+        self.requestAccessToEKEntityTypeEvent({(_) in self.importEventsImp()})
+        /*
+        self.eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
+            {(granted:Bool, error:NSError?) in
                 if(granted){
                     self.importEventsImp()
                 }
-            })
-        })
+                else{
+                    SVProgressHUD.showErrorWithStatus("请在程序允许方法日历")
+                }
+            }
+        )
+        */
     }
-    
     func importEventsImp(){
         var calendar = self.getCalendarby("NuaaTimeTable")
         var dateComponents = NSDateComponents()

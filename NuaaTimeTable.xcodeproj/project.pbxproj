@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF219E661A94D93700B36753 /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8AA1A93A1CE009E8040 /* libSVProgressHUD.a */; };
 		BF2ED1771A92221C0030482C /* UserInfoSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */; };
 		BF2ED1791A922BA90030482C /* ExamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1781A922BA90030482C /* ExamListViewController.swift */; };
 		BF2ED17B1A922D900030482C /* DEDUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED17A1A922D900030482C /* DEDUserInfo.swift */; };
@@ -45,11 +46,12 @@
 		BF9409AD1A18CB7500160BB6 /* DedEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AC1A18CB7500160BB6 /* DedEngine.swift */; };
 		BF9409AF1A18CC3100160BB6 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AE1A18CC3100160BB6 /* AEXML.swift */; };
 		BF9409B31A18D87300160BB6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409B21A18D87300160BB6 /* LoginViewController.swift */; };
-		BFB1C8AB1A93A1DC009E8040 /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8AA1A93A1CE009E8040 /* libSVProgressHUD.a */; };
 		BFB1C8B51A93A228009E8040 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1C8B01A93A228009E8040 /* SVIndefiniteAnimatedView.m */; };
 		BFB1C8B71A93A228009E8040 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1C8B41A93A228009E8040 /* SVProgressHUD.m */; };
 		BFB1C8B91A93A245009E8040 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8B81A93A245009E8040 /* QuartzCore.framework */; };
 		BFB1C8BA1A93A251009E8040 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFB1C8B21A93A228009E8040 /* SVProgressHUD.bundle */; };
+		BFF2A0BA1A95107200C092EA /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8C11A93A2EB009E8040 /* Dollar.framework */; };
+		BFF2A0BB1A95107200C092EA /* Dollar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8C11A93A2EB009E8040 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFFB073E1A925747008EFE01 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB073D1A925747008EFE01 /* Async.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +84,28 @@
 			remoteGlobalIDString = 92E6686F19F09C6400BB4FB8;
 			remoteInfo = DollarTests;
 		};
+		BFF2A0BC1A95107200C092EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E0D03B19467C67002ACC3D;
+			remoteInfo = Dollar;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BFF2A0BF1A95107200C092EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BFF2A0BB1A95107200C092EA /* Dollar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoSettingTableViewController.swift; sourceTree = "<group>"; };
@@ -167,8 +190,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF219E661A94D93700B36753 /* libSVProgressHUD.a in Frameworks */,
 				BFB1C8B91A93A245009E8040 /* QuartzCore.framework in Frameworks */,
-				BFB1C8AB1A93A1DC009E8040 /* libSVProgressHUD.a in Frameworks */,
+				BFF2A0BA1A95107200C092EA /* Dollar.framework in Frameworks */,
 				BF9409A21A18C7E500160BB6 /* libxml2.2.dylib in Frameworks */,
 				BF9409A01A18C7DC00160BB6 /* SystemConfiguration.framework in Frameworks */,
 				BF94099E1A18C7A600160BB6 /* MobileCoreServices.framework in Frameworks */,
@@ -426,10 +450,12 @@
 				BF9409361A18C4FD00160BB6 /* Sources */,
 				BF9409371A18C4FD00160BB6 /* Frameworks */,
 				BF9409381A18C4FD00160BB6 /* Resources */,
+				BFF2A0BF1A95107200C092EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BFF2A0BD1A95107200C092EA /* PBXTargetDependency */,
 			);
 			name = NuaaTimeTable;
 			productName = NuaaTimeTable;
@@ -605,6 +631,11 @@
 			target = BF9409391A18C4FD00160BB6 /* NuaaTimeTable */;
 			targetProxy = BF9409501A18C4FD00160BB6 /* PBXContainerItemProxy */;
 		};
+		BFF2A0BD1A95107200C092EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dollar;
+			targetProxy = BFF2A0BC1A95107200C092EA /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -710,6 +741,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",
@@ -729,6 +761,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",

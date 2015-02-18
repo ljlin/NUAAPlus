@@ -90,4 +90,11 @@ class human : NSObject {
 
 var t = human()
 
+var stringarr = ["aaaaaaa","bbbb","cccc"]
+
+
+let stringdic = stringarr.map({
+    [$0 : $0]
+})
+
 
