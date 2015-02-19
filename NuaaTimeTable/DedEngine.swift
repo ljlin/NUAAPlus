@@ -10,8 +10,6 @@ import Foundation
 import EventKit
 import Dollar
 
-//typealias Success = ()->()
-
 class DedEngine : NSObject {
     var courses = [DEDCourseInfo]()
     var eventStore = EKEventStore()
@@ -22,15 +20,14 @@ class DedEngine : NSObject {
         }
         return Singleton.instance
     }
-    lazy var calendarDic = DedEngine.sharedInstance.getCalendarDictionary()
-
+    lazy var calendars = DedEngine.sharedInstance.getCalendars()
     func requestAccessToEKEntityTypeEvent(success:SuccessBlock) {
-        if(EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) == EKAuthorizationStatus.Authorized){
+        if EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) == EKAuthorizationStatus.Authorized {
             success("")
         }
         else {
             self.eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:{(granted:Bool, error:NSError?) in
-                if(granted){
+                if granted {
                     success("")
                 }
                 else{
@@ -39,22 +36,22 @@ class DedEngine : NSObject {
             })
         }
     }
-    func getCalendarDictionary() -> [String:EKCalendar] {
-        var calendarDic : [String:EKCalendar] = [:]
+    func getCalendars() -> [EKCalendar] {
+        var res = []
         self.requestAccessToEKEntityTypeEvent({(_) in
-            for cal in self.eventStore.calendarsForEntityType(EKEntityTypeEvent) {
-                calendarDic[cal.title!! as String ] = (cal as EKCalendar)
-            }
+            res = self.eventStore.calendarsForEntityType(EKEntityTypeEvent).filter({
+                ($0 as EKCalendar).source.title == "iCloud"
+            })
         })
-        return calendarDic
+        return res as [EKCalendar]
     }
     func getCourseTableBySettings() -> Bool {
         if let user = userInfo {
             self.getCourseTableByXh(user.xh, xn: user.xn, xq: user.xq)
-            return true;
+            return true
         }
         else {
-            return false;
+            return false
         }
     }
     func getCourseTableByXh(xh : String,xn : String, xq : String) {
@@ -73,33 +70,17 @@ class DedEngine : NSObject {
         let xmlData = xmlString.dataUsingEncoding(NSUTF8StringEncoding)
         var error:NSError? = nil
         let xmldoc = AEXMLDocument(xmlData: xmlData!, error: &error)
-        
         if (error != nil) { NSLog("%@", error!.description) }
         if let xml = xmldoc{
             for child in xml["soap:Envelope"]["soap:Body"]["GetCourseTableByXhResponse"]["GetCourseTableByXhResult"]["diffgr:diffgram"]["NewDataSet"].children {
                 courses.append(DEDCourseInfo(XML: child))
             }
         }
-
     }
-
-    func importEvents(){
-        self.requestAccessToEKEntityTypeEvent({(_) in self.importEventsImp()})
-        /*
-        self.eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
-            {(granted:Bool, error:NSError?) in
-                if(granted){
-                    self.importEventsImp()
-                }
-                else{
-                    SVProgressHUD.showErrorWithStatus("请在程序允许方法日历")
-                }
-            }
-        )
-        */
+    func importEvents(calendar:EKCalendar){
+        self.requestAccessToEKEntityTypeEvent({(_) in self.importEventsImp(calendar)})
     }
-    func importEventsImp(){
-        var calendar = self.getCalendarby("NuaaTimeTable")
+    func importEventsImp(calendar:EKCalendar){
         var dateComponents = NSDateComponents()
         dateComponents.year  = 2015
         dateComponents.month = 3
@@ -107,7 +88,6 @@ class DedEngine : NSObject {
         var dateCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         var semesterDate = dateCalendar?.dateFromComponents(dateComponents)!
         let timeForClass : [Int] = [8*60*60,10*60*60+15*60,14*60*60,16*60*60+15*60,18*60*60+30*60]
-        
         for course in self.courses {
             let weekDay : Int = course.week - 1
             let oneDay  : Int = 60 * 60 * 24
@@ -117,7 +97,6 @@ class DedEngine : NSObject {
                     (weekNum - 1)  * oneWeek +
                     weekDay * oneDay +
                     timeForClass[ (course.unit - 1 ) / 2 ]
-                
                 let startDate = NSDate(timeInterval: Double(interval), sinceDate: semesterDate!)
                 let endDate = startDate.dateByAddingTimeInterval((60 + 45) * 60)
                 var event = EKEvent(eventStore: self.eventStore)
@@ -128,44 +107,23 @@ class DedEngine : NSObject {
                 event.allDay = false
                 self.eventStore.saveEvent(event, span: EKSpanThisEvent, commit: false, error: nil)
             }
-            
         }
         self.eventStore .commit(nil)
     }
-    func getCalendarby(title:String) -> EKCalendar? {
-        //let path = NSBundle.mainBundle().pathForResource("Settings", ofType: "plist")
-        //var Settings = NSMutableDictionary(contentsOfFile: path!)
-        //var ids : NSMutableDictionary = Settings?["identifier"] as NSMutableDictionary
-        var localSource : EKSource? = (self.eventStore.sources() as [EKSource]).first
+    func creatCalendarby(title:String) -> EKCalendar? {
         var calendar : EKCalendar? = nil
-        let sources = self.eventStore.sources() as NSArray
-        for source in self.eventStore.sources() as [EKSource] {
-            println(source.title)
-            if ((source.title == "iCloud")  && (source.sourceType.value == EKSourceTypeCalDAV.value) ) {
-                localSource = source;
-                break;
-            }
+        let sources = (self.eventStore.sources() as [EKSource]).filter {
+           ($0.title == "iCloud")&&($0.sourceType.value == EKSourceTypeCalDAV.value)
         }
-        var created = false
-        /*
-        if let identifier = ids[title] as String? {
-            if(identifier != ""){
-                calendar = self.eventStore.calendarWithIdentifier(identifier)
-                created = true
-                NSLog("get cal id = %@", calendar!.calendarIdentifier);
-            }
-        }
-        */
-        if(!created){
-            calendar = EKCalendar(forEntityType:EKEntityTypeEvent , eventStore:self.eventStore)
-            calendar?.title = title;
-            calendar?.source = localSource;
-            self.eventStore.saveCalendar(calendar, commit:true, error:nil)
-            NSLog("creat cal id = %@", calendar!.calendarIdentifier);
-            //ids[title] = calendar!.calendarIdentifier;
-            //Settings!.writeToFile(path!,atomically:true)
-        }
-        //Settings = NSMutableDictionary(contentsOfFile: path!)
+        var localSource : EKSource? = sources.isEmpty ?
+                                        (self.eventStore.sources() as [EKSource]).first :
+                                        sources.first
+        
+        calendar = EKCalendar(forEntityType:EKEntityTypeEvent , eventStore:self.eventStore)
+        calendar?.title = title;
+        calendar?.source = localSource;
+        self.eventStore.saveCalendar(calendar, commit:true, error:nil)
+        NSLog("creat cal id = %@", calendar!.calendarIdentifier);
         return calendar
     }
 }

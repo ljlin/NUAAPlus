@@ -8,8 +8,10 @@
 
 import UIKit
 import Dollar
+import EventKit
 
-class CourseTableViewController: UITableViewController,UIActionSheetDelegate {
+
+class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIAlertViewDelegate {
     var engine = DedEngine.sharedInstance
     @IBAction func getButtonClicked(sender: AnyObject) {
         SVProgressHUD.show()
@@ -17,32 +19,27 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate {
         Async.background({
             res = self.engine.getCourseTableBySettings()
         }).main({
-            if(res){
-                SVProgressHUD.showSuccessWithStatus("获取个人课表成功")
+            if res {
+                SVProgressHUD.showSuccessWithStatus("获取成功")
                 self.tableView.reloadData()
             }
             else {
-                SVProgressHUD.showErrorWithStatus("请先设置学号、学年学期等信息")
+                SVProgressHUD.showErrorWithStatus("请先设置信息")
             }
         })
     }
     @IBAction func importButtonClicked(sender: AnyObject) {
+        let rightBarButton = self.navigationController?.navigationBar.topItem?.rightBarButtonItem
         var actionSheet = UIActionSheet(title: "导入日历",
                                      delegate: self,
                             cancelButtonTitle: nil,
                        destructiveButtonTitle: nil)
         actionSheet.addButtonWithTitle("新建日历")
-        for (title,cal) in self.engine.calendarDic {
-            if(cal.source.title == "iCloud"){
-                actionSheet.addButtonWithTitle(title)
-            }
+        for cal in self.engine.calendars {
+            actionSheet.addButtonWithTitle(cal.title)
         }
         actionSheet.cancelButtonIndex = actionSheet.addButtonWithTitle("取消")
-        actionSheet.showFromBarButtonItem(self.navigationController?.navigationBar.topItem?.rightBarButtonItem,animated: true)
-
-        //Async.background({
-        //    self.engine.importEvents()
-        //})
+        actionSheet.showFromBarButtonItem(rightBarButton,animated: true)
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.engine.courses.count;
@@ -59,15 +56,42 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate {
         }
         return cell!
     }
-    
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int){
-        if(buttonIndex == 0){
-            
-        }
-        else {
-            self.engine.calendarDic.values.filter({(cal: EKCalendar) in cal.source.title == "iCloud" })
+        switch buttonIndex {
+        case 0 :
+            var alertView = UIAlertView(title: "新建日历",
+                                      message: "为新建的日历取名",
+                                     delegate: self,
+                            cancelButtonTitle: "取消",
+                            otherButtonTitles: "确定")
+            alertView.alertViewStyle = UIAlertViewStyle.PlainTextInput;
+            alertView.show()
+        case actionSheet.cancelButtonIndex :
+            return
+        default:
+            SVProgressHUD.show()
+            Async.background({
+                self.engine.importEvents(self.engine.calendars[buttonIndex-1])
+            }).main({
+                SVProgressHUD.dismiss()
+            })
         }
     }
-
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if buttonIndex != alertView.cancelButtonIndex {
+            //NSLog("%@",alertView.textFieldAtIndex(0)!.text)
+            if(alertView.textFieldAtIndex(0)!.text != ""){
+                SVProgressHUD.show()
+                Async.background({
+                    if let calendar = self.engine.creatCalendarby(alertView.textFieldAtIndex(0)!.text){
+                        self.engine.importEvents(calendar)
+                        self.engine.calendars = self.engine.getCalendars()
+                    }
+                }).main({
+                    SVProgressHUD.dismiss()
+                })
+            }
+        }
+    }
 }
 

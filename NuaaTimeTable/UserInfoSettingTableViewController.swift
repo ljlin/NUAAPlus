@@ -58,7 +58,7 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         return component == 0 ? xnArray[row] : xqArray[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if(component == 0){
+        if component == 0 {
             xn = xnArray[row]
         }
         else{
