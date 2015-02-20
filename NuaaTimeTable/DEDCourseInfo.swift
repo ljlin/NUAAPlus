@@ -9,7 +9,7 @@
 import UIKit
 import Dollar
 
-class DEDCourseInfo: NSObject {
+class DEDCourseInfo: NSObject, LLKVCoding {
     
     var kcm    = String()
     var jsm    = String()
@@ -17,6 +17,7 @@ class DEDCourseInfo: NSObject {
     var roomid = String()
     var week   : Int = 0
     var unit   : Int = 0
+    var lsjs   : Int = 0
     var weeks  = [Int]()
 
     var title    : String { return "\(self.kcm) \(self.jsm)" }
@@ -24,13 +25,13 @@ class DEDCourseInfo: NSObject {
     var time     : String { return "周\(self.week)第\(self.unit)-\(self.unit+1)节"}
     
     class var keys : [String] {
-        return ["kcm","jsm","xiaoqu","roomid","week","unit","weeks","title","location","time"]
+        return ["kcm","jsm","xiaoqu","roomid","week","unit","lsjs","weeks","title","location","time"]
     }
     class var keysForStringProperty : [String] {
         return Array(DEDCourseInfo.keys[0...3])
     }
     class var keysForIntProperty : [String] {
-        return Array(DEDCourseInfo.keys[4...5])
+        return Array(DEDCourseInfo.keys[4...6])
     }
     
     init(XML:AEXMLElement) {
@@ -40,4 +41,17 @@ class DEDCourseInfo: NSObject {
         var weekStringArray : [String] = XML["weeks"].value.componentsSeparatedByString(",")
         self.weeks = weekStringArray.map({$0.toInt()!})
     }
+    /*
+    func encodeWithCoder(aCoder: NSCoder) {
+        $.each(DEDCourseInfo.keys,{
+            aCoder.encodeObject(self ?< $0, forKey: $0)
+        })
+    }
+    required init(coder aDecoder: NSCoder) {
+        super.init()
+        $.each(DEDCourseInfo.keys,{
+            self.setValue(aDecoder.decodeObjectForKey($0),forKeyPath: $0)
+        })
+    }
+    */
 }

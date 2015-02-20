@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="1753" y="47"/>
         </scene>
-        <!--校历-->
+        <!--CalendarViewController-->
         <scene sceneID="9DC-ID-x3K">
             <objects>
-                <viewController id="sTC-JJ-XUr" customClass="SchoolCalendarViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SchoolCalendarViewController" title="CalendarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sTC-JJ-XUr" customClass="SchoolCalendarViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7aL-hx-agg"/>
                         <viewControllerLayoutGuide type="bottom" id="STU-Zk-Vdw"/>
@@ -218,7 +218,7 @@
                         <sections>
                             <tableViewSection id="hgj-P5-qe5">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Bwi-eh-RIT">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="xhCellIdentifier" id="Bwi-eh-RIT">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bwi-eh-RIT" id="kuW-TE-H8y">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -246,40 +246,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TPl-mG-RHa">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TPl-mG-RHa" id="cSD-Pr-Wow">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-YI-mbm">
-                                                    <rect key="frame" x="8" y="11" width="34" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="yFq-dY-ksl">
-                                                    <rect key="frame" x="50" y="7" width="542" height="30"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="UiA-YI-mbm" firstAttribute="top" secondItem="cSD-Pr-Wow" secondAttribute="topMargin" constant="3" id="EOi-5I-zVg"/>
-                                                <constraint firstItem="yFq-dY-ksl" firstAttribute="leading" secondItem="UiA-YI-mbm" secondAttribute="trailing" constant="8" symbolic="YES" id="HeH-eP-fEt"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="yFq-dY-ksl" secondAttribute="bottom" constant="-1.5" id="NiG-cm-nFv"/>
-                                                <constraint firstItem="UiA-YI-mbm" firstAttribute="centerY" secondItem="cSD-Pr-Wow" secondAttribute="centerY" id="PQh-I2-QLm"/>
-                                                <constraint firstItem="yFq-dY-ksl" firstAttribute="top" secondItem="cSD-Pr-Wow" secondAttribute="topMargin" constant="-1" id="TvQ-h6-qFH"/>
-                                                <constraint firstItem="UiA-YI-mbm" firstAttribute="leading" secondItem="cSD-Pr-Wow" secondAttribute="leadingMargin" id="g0l-PG-A5P"/>
-                                                <constraint firstItem="yFq-dY-ksl" firstAttribute="trailing" secondItem="cSD-Pr-Wow" secondAttribute="trailingMargin" id="hXC-6n-MgR"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="FbB-06-s1f">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="158" id="Db1-sb-6Xn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="xnxqCellIdentifier" rowHeight="158" id="Db1-sb-6Xn">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Db1-sb-6Xn" id="C3c-a6-B7q">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -316,7 +287,7 @@
                             </tableViewSection>
                             <tableViewSection id="DKd-0q-sWx">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xkd-Uw-cdb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="switchCellIdentifier" id="xkd-Uw-cdb">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xkd-Uw-cdb" id="bBq-nP-Dby">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -341,7 +312,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="OHm-yV-2NS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dateCellIdentifier" rowHeight="160" id="OHm-yV-2NS">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OHm-yV-2NS" id="HqM-S5-thF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -378,7 +349,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="pwdTextField" destination="yFq-dY-ksl" id="WUG-mm-E23"/>
                         <outlet property="semesterDatePicker" destination="Zwm-dH-OcA" id="Bhg-Ui-OZ8"/>
                         <outlet property="setDateManually" destination="6pk-ye-WBV" id="AMb-XU-fq3"/>
                         <outlet property="xhTextField" destination="eQS-kb-T8U" id="jPg-PN-5QH"/>
@@ -458,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1nA-BP-r1N">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttendingCellIdentifier" id="1nA-BP-r1N">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1nA-BP-r1N" id="Y5G-nq-eQC">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -498,7 +468,7 @@
         <!--考试安排-->
         <scene sceneID="Tob-u4-M3e">
             <objects>
-                <viewController id="R7e-eD-lsG" customClass="ExamListViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExamListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7e-eD-lsG" customClass="ExamListViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OOi-qM-Xal"/>
                         <viewControllerLayoutGuide type="bottom" id="ahO-tz-JfW"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Dollar
 
 class UserInfoSettingTableViewController: UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
@@ -21,26 +22,43 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.xnxqPickerView.selectRow(1, inComponent: 0, animated: true)
-        self.xnxqPickerView.selectRow(0, inComponent: 1, animated: true)
-        self.setDateManually.setOn(false, animated: true)
-        self.xn = self.xnArray[1]
-        self.xq = self.xqArray[0]
+
+        var xnIdx = 1, xqIdx = 0, switchValue = false;
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("DEDUserInfo") as? NSData {
+            self.engine.userInfo = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? DEDUserInfo
+            self.xhTextField.text = self.engine.userInfo!.xh
+            switchValue = self.engine.userInfo!.setSemesterDateManually
+            xnIdx = $.indexOf(self.xnArray,value: self.engine.userInfo!.xn)!
+            xqIdx = $.indexOf(self.xqArray,value: self.engine.userInfo!.xq)!
+        }
+        self.xnxqPickerView.selectRow(xnIdx, inComponent: 0, animated: true)
+        self.xnxqPickerView.selectRow(xqIdx, inComponent: 1, animated: true)
+        self.setDateManually.setOn(switchValue, animated: true)
+        if switchValue {
+            self.semesterDatePicker.setDate(self.engine.userInfo!.semesterDate, animated: true)
+        }
+        self.xn = self.xnArray[xnIdx]
+        self.xq = self.xqArray[xqIdx]
     }
     @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
         var userInfo = DEDUserInfo()
         userInfo <== [
             "xh"  : self.xhTextField.text,
-            "pwd" : self.pwdTextField.text,
+            //"pwd" : self.pwdTextField.text,
             "xn"  : self.xn,
             "xq"  : self.xq,
             "setSemesterDateManually" : self.setDateManually.on,
             "semesterDate" : self.semesterDatePicker.date
         ]
         self.engine.userInfo = userInfo
+        
+        let data = NSKeyedArchiver.archivedDataWithRootObject(userInfo)
+        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "DEDUserInfo")
+        
         SVProgressHUD.showSuccessWithStatus("保存成功")
         self.xhTextField.resignFirstResponder()
-        self.pwdTextField.resignFirstResponder()
+        
+        //self.pwdTextField.resignFirstResponder()
     }
     
     //PickerView

@@ -1,5 +1,5 @@
 //
-//  toolbox.swift
+//  ToolBox.swift
 //  NuaaTimeTable
 //
 //  Created by ljlin on 15/2/14.
@@ -27,3 +27,6 @@ func <== (to:NSObject, from:[String:AnyObject?]){
     }
 }
 
+protocol LLKVCoding {
+    class var keys : [String] { get }
+}

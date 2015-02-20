@@ -8,8 +8,6 @@
 
 import UIKit
 import Dollar
-import EventKit
-
 
 class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIAlertViewDelegate {
     var engine = DedEngine.sharedInstance
@@ -41,6 +39,13 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
         actionSheet.cancelButtonIndex = actionSheet.addButtonWithTitle("取消")
         actionSheet.showFromBarButtonItem(rightBarButton,animated: true)
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.engine.courses.isEmpty {
+            self.engine.tryLoadCachedTable()
+        }
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.engine.courses.count;
     }
@@ -67,6 +72,7 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
             alertView.alertViewStyle = UIAlertViewStyle.PlainTextInput;
             alertView.show()
         case actionSheet.cancelButtonIndex :
+            self.engine.calculateFirstSemesterMonday()
             return
         default:
             SVProgressHUD.show()
