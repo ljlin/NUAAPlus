@@ -23,6 +23,8 @@ class NuaaTimeTableTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
+        var yz = "yvtfytfv&&^BGUYgn&HN*&HN*n2014-20151051330316GVF$%#^%FTVsdfa&G&*H(*JOIJdsf:LKPO:".md5
+        let time = NSDate().timeIntervalSince1970
 
         XCTAssert(true, "Pass")
     }

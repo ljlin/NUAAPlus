@@ -7,3 +7,6 @@
 [submodule "SVProgressHUD"]
 	path = SVProgressHUD
 	url = https://github.com/TransitApp/SVProgressHUD
+[submodule "SOAP-IOS"]
+	path = SOAP-IOS
+	url = https://github.com/ljlin/SOAP-IOS

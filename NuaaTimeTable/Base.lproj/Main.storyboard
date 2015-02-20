@@ -455,10 +455,10 @@
             </objects>
             <point key="canvasLocation" x="941" y="2073"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Attending Table View Controller-->
         <scene sceneID="XYH-nq-Yzb">
             <objects>
-                <tableViewController id="fkl-Eu-oFb" sceneMemberID="viewController">
+                <tableViewController id="fkl-Eu-oFb" customClass="AttendingTableViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7YN-Ds-WX2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -476,7 +476,13 @@
                             <outlet property="delegate" destination="fkl-Eu-oFb" id="Rzs-Ie-fqM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qYa-DP-Kjt"/>
+                    <navigationItem key="navigationItem" id="qYa-DP-Kjt">
+                        <barButtonItem key="leftBarButtonItem" title="获取" id="xeI-O6-CRZ">
+                            <connections>
+                                <action selector="getButtonClicked:" destination="fkl-Eu-oFb" id="pHV-fL-bOr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcQ-8l-xDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

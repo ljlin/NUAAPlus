@@ -146,6 +146,7 @@ class DEDUserInfo: NSObject, NSCoding {
     
 }
 
+/*
 
 var t = DEDUserInfo()
 
@@ -163,6 +164,28 @@ var newData: NSData = defaults.objectForKey("Info") as NSData
 var newObj: DEDUserInfo = NSKeyedUnarchiver.unarchiveObjectWithData(newData) as DEDUserInfo
 
 NSLog("%@", newObj.xh)
+
+*/
+
+
+var yz = "yvtfytfv&&^BGUYgn&HN*&HN*n2014-20151051330316GVF$%#^%FTVsdfa&G&*H(*JOIJdsf:LKPO:".md5
+println(yz);
+yz = "chnchbgtyv56rc65EC^%VR%^B67bt76N*&NH*&BTyfvrcd^&BT&^GNYBftfv6vresxs56cVDTYBG^&HG&P>L{PL[p.lp>LP{L"
+let urlstr = "http://nuaavt.sinaapp.com/chen/dedclassapi.php?xn=2014-2015&xq=1&xh=051330316&yz1=c74c6522a04207f5996ed6945a923bc0&time=1424455672&yz2=4bb62ca51619b99ee3d78575c8f7a56c"
+
+let url = NSURL(string: urlstr)
+let json = NSString(contentsOfURL: url!, encoding: NSUTF8StringEncoding, error: nil)!
+
+let data = json.dataUsingEncoding(NSUTF8StringEncoding)!
+
+//let dic = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: nil) as NSArray
+
+//let ddd = dic.firstObject as [String : String]
+
+//ddd["kcm"]
+
+
+
 
 
 

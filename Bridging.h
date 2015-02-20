@@ -12,6 +12,7 @@
 #import "SoapService.h"
 #import "SoapUtility.h"
 #import "SVProgressHUD.h"
+#import <CommonCrypto/CommonDigest.h>
 
 //typedef void (^SuccessHandler) (void);
 
