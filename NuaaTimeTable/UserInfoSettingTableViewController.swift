@@ -22,7 +22,6 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
         var xnIdx = 1, xqIdx = 0, switchValue = false;
         if let data = NSUserDefaults.standardUserDefaults().objectForKey("DEDUserInfo") as? NSData {
             self.engine.userInfo = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? DEDUserInfo
@@ -30,6 +29,9 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
             switchValue = self.engine.userInfo!.setSemesterDateManually
             xnIdx = $.indexOf(self.xnArray,value: self.engine.userInfo!.xn)!
             xqIdx = $.indexOf(self.xqArray,value: self.engine.userInfo!.xq)!
+        }
+        else if let xh = NSUserDefaults.standardUserDefaults().stringForKey("xh_preference") {
+            self.xhTextField.text = xh
         }
         self.xnxqPickerView.selectRow(xnIdx, inComponent: 0, animated: true)
         self.xnxqPickerView.selectRow(xqIdx, inComponent: 1, animated: true)
@@ -60,8 +62,14 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         
         //self.pwdTextField.resignFirstResponder()
     }
+    @IBAction func CleanButtonClicked(sender: AnyObject) {
+        for key in ["DEDUserInfo","CourseTableXML","xh_preference"] {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(key)
+        }
+    }
     
     //PickerView
+    
     let xnArray = ["2013-2014","2014-2015","2015-2016","2016-2017"]
     let xqArray = ["1","2"]
     var xn = "hehe"

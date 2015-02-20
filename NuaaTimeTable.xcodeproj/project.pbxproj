@@ -41,7 +41,6 @@
 		BF94099E1A18C7A600160BB6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF94099D1A18C7A600160BB6 /* MobileCoreServices.framework */; };
 		BF9409A01A18C7DC00160BB6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF94099F1A18C7DC00160BB6 /* SystemConfiguration.framework */; };
 		BF9409A21A18C7E500160BB6 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9409A11A18C7E500160BB6 /* libxml2.2.dylib */; };
-		BF9409A61A18C90A00160BB6 /* ljlinCourseInfo.xml in Resources */ = {isa = PBXBuildFile; fileRef = BF9409A41A18C90A00160BB6 /* ljlinCourseInfo.xml */; };
 		BF9409A71A18C90A00160BB6 /* NuaaDedWebService.xml in Resources */ = {isa = PBXBuildFile; fileRef = BF9409A51A18C90A00160BB6 /* NuaaDedWebService.xml */; };
 		BF9409AD1A18CB7500160BB6 /* DedEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AC1A18CB7500160BB6 /* DedEngine.swift */; };
 		BF9409AF1A18CC3100160BB6 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AE1A18CC3100160BB6 /* AEXML.swift */; };
@@ -172,7 +171,6 @@
 		BF94099D1A18C7A600160BB6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BF94099F1A18C7DC00160BB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BF9409A11A18C7E500160BB6 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
-		BF9409A41A18C90A00160BB6 /* ljlinCourseInfo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ljlinCourseInfo.xml; sourceTree = "<group>"; };
 		BF9409A51A18C90A00160BB6 /* NuaaDedWebService.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NuaaDedWebService.xml; sourceTree = "<group>"; };
 		BF9409AC1A18CB7500160BB6 /* DedEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DedEngine.swift; sourceTree = "<group>"; };
 		BF9409AE1A18CC3100160BB6 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AEXML.swift; path = NuaaTimeTable/AEXML.swift; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				BFF2A0C81A97028C00C092EA /* Settings.bundle */,
-				BF9409A41A18C90A00160BB6 /* ljlinCourseInfo.xml */,
 				BF9409A51A18C90A00160BB6 /* NuaaDedWebService.xml */,
 				BF94093E1A18C4FD00160BB6 /* Info.plist */,
 			);
@@ -566,7 +563,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFB1C8BA1A93A251009E8040 /* SVProgressHUD.bundle in Resources */,
-				BF9409A61A18C90A00160BB6 /* ljlinCourseInfo.xml in Resources */,
 				BF9409451A18C4FD00160BB6 /* Main.storyboard in Resources */,
 				BF94094A1A18C4FD00160BB6 /* LaunchScreen.xib in Resources */,
 				BF9409A71A18C90A00160BB6 /* NuaaDedWebService.xml in Resources */,

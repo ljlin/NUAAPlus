@@ -218,7 +218,7 @@
                         <sections>
                             <tableViewSection id="hgj-P5-qe5">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="xhCellIdentifier" id="Bwi-eh-RIT">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="xhCellIdentifier" id="Bwi-eh-RIT">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bwi-eh-RIT" id="kuW-TE-H8y">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -250,7 +250,7 @@
                             </tableViewSection>
                             <tableViewSection id="FbB-06-s1f">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="xnxqCellIdentifier" rowHeight="158" id="Db1-sb-6Xn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="xnxqCellIdentifier" rowHeight="158" id="Db1-sb-6Xn">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Db1-sb-6Xn" id="C3c-a6-B7q">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -287,7 +287,7 @@
                             </tableViewSection>
                             <tableViewSection id="DKd-0q-sWx">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="switchCellIdentifier" id="xkd-Uw-cdb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="switchCellIdentifier" id="xkd-Uw-cdb">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xkd-Uw-cdb" id="bBq-nP-Dby">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -312,7 +312,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dateCellIdentifier" rowHeight="160" id="OHm-yV-2NS">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dateCellIdentifier" rowHeight="160" id="OHm-yV-2NS">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OHm-yV-2NS" id="HqM-S5-thF">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -330,6 +330,42 @@
                                                 <constraint firstItem="Zwm-dH-OcA" firstAttribute="top" secondItem="HqM-S5-thF" secondAttribute="top" id="UTo-9k-53L"/>
                                                 <constraint firstAttribute="trailing" secondItem="Zwm-dH-OcA" secondAttribute="trailing" id="djg-fe-GPj"/>
                                                 <constraint firstItem="Zwm-dH-OcA" firstAttribute="leading" secondItem="HqM-S5-thF" secondAttribute="leading" id="s6q-Gk-0wS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="xEU-KB-Oag">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CleanCellidentifier" id="6hs-iv-qxb">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6hs-iv-qxb" id="5Tu-He-VXH">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKe-Fu-3Cp">
+                                                    <rect key="frame" x="255" y="8" width="90" height="27.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="7bi-5j-5vg"/>
+                                                    </constraints>
+                                                    <state key="normal" title="清除所有数据">
+                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="7bi-5j-5vg"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="CleanButtonClicked:" destination="oL2-zX-rya" eventType="touchUpInside" id="TRD-xl-9s6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SKe-Fu-3Cp" firstAttribute="top" secondItem="5Tu-He-VXH" secondAttribute="topMargin" id="HzF-T1-AUK"/>
+                                                <constraint firstItem="SKe-Fu-3Cp" firstAttribute="centerX" secondItem="5Tu-He-VXH" secondAttribute="centerX" id="Te6-nb-yZq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SKe-Fu-3Cp" secondAttribute="bottom" id="x09-l7-lac"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
