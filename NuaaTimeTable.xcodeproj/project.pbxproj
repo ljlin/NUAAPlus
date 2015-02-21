@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF13E95D1A9876560078EFA3 /* Do-not-upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13E95C1A9876560078EFA3 /* Do-not-upload.swift */; };
 		BF219E661A94D93700B36753 /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8AA1A93A1CE009E8040 /* libSVProgressHUD.a */; };
 		BF2ED1771A92221C0030482C /* UserInfoSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */; };
 		BF2ED1791A922BA90030482C /* ExamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1781A922BA90030482C /* ExamListViewController.swift */; };
@@ -112,6 +113,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF13E95C1A9876560078EFA3 /* Do-not-upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Do-not-upload.swift"; sourceTree = "<group>"; };
 		BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoSettingTableViewController.swift; sourceTree = "<group>"; };
 		BF2ED1781A922BA90030482C /* ExamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListViewController.swift; sourceTree = "<group>"; };
 		BF2ED17A1A922D900030482C /* DEDUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEDUserInfo.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 		BF9409AA1A18CB4800160BB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF13E95C1A9876560078EFA3 /* Do-not-upload.swift */,
 				BF9409AC1A18CB7500160BB6 /* DedEngine.swift */,
 				BF2ED17A1A922D900030482C /* DEDUserInfo.swift */,
 				BF4600A41A8D977C007C0BC3 /* DEDCourseInfo.swift */,
@@ -623,6 +626,7 @@
 				BF9409AD1A18CB7500160BB6 /* DedEngine.swift in Sources */,
 				BF85D0AA1A97C7DE006B4E08 /* AFURLResponseSerialization.m in Sources */,
 				BFFB073E1A925747008EFE01 /* Async.swift in Sources */,
+				BF13E95D1A9876560078EFA3 /* Do-not-upload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

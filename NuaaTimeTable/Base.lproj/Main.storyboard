@@ -455,7 +455,7 @@
             </objects>
             <point key="canvasLocation" x="941" y="2073"/>
         </scene>
-        <!--Attending Table View Controller-->
+        <!--修读课程-->
         <scene sceneID="XYH-nq-Yzb">
             <objects>
                 <tableViewController id="fkl-Eu-oFb" customClass="AttendingTableViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -490,7 +490,7 @@
                             <outlet property="delegate" destination="fkl-Eu-oFb" id="Rzs-Ie-fqM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qYa-DP-Kjt">
+                    <navigationItem key="navigationItem" title="修读课程" id="qYa-DP-Kjt">
                         <barButtonItem key="leftBarButtonItem" title="获取" id="xeI-O6-CRZ">
                             <connections>
                                 <action selector="getButtonClicked:" destination="fkl-Eu-oFb" id="pHV-fL-bOr"/>

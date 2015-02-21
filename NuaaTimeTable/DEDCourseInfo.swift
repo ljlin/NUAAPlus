@@ -41,17 +41,4 @@ class DEDCourseInfo: NSObject, LLKVCoding {
         var weekStringArray : [String] = XML["weeks"].value.componentsSeparatedByString(",")
         self.weeks = weekStringArray.map({$0.toInt()!})
     }
-    /*
-    func encodeWithCoder(aCoder: NSCoder) {
-        $.each(DEDCourseInfo.keys,{
-            aCoder.encodeObject(self ?< $0, forKey: $0)
-        })
-    }
-    required init(coder aDecoder: NSCoder) {
-        super.init()
-        $.each(DEDCourseInfo.keys,{
-            self.setValue(aDecoder.decodeObjectForKey($0),forKeyPath: $0)
-        })
-    }
-    */
 }

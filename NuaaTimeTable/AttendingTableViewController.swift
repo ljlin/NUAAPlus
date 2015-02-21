@@ -25,7 +25,22 @@ class AttendingTableViewController: UITableViewController {
     // MARK: - IBACtions
     @IBAction func getButtonClicked(sender: AnyObject) {
         if let user =  self.engine.userInfo {
-
+            SVProgressHUD.show()
+            let baseString = "http://nuaavt.sinaapp.com/chen/dedclassapi.php"
+            let parameter = DEDClassParameter(user)
+            var manager = AFHTTPRequestOperationManager()
+            manager.responseSerializer = AFHTTPResponseSerializer()
+            manager.GET(baseString, parameters: parameter,
+                success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
+                    let jsonData = responseObject as NSData
+                    self.analyzeJSONData(jsonData)
+                    NSUserDefaults.standardUserDefaults().setObject(jsonData, forKey: "AttendingsJSONData")
+                    SVProgressHUD.showSuccessWithStatus("获取成功")
+                },
+                failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
+                    NSLog("%@", error)
+                }
+            )
         }
         else {
             SVProgressHUD.showErrorWithStatus("请先设置信息")
@@ -36,7 +51,6 @@ class AttendingTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         if self.attendings.isEmpty {
             if let data = NSUserDefaults.standardUserDefaults().objectForKey("AttendingsJSONData") as? NSData {
-                println("hahahahha")
                 self.analyzeJSONData(data)
             }
         }
