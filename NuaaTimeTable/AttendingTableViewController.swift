@@ -59,12 +59,10 @@ class AttendingTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.attendings.count
     }
-    
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "AttendingCellIdentifier"

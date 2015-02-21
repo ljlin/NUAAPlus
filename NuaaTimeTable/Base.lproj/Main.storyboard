@@ -186,26 +186,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwG-CN-BOr">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nwG-CN-BOr" firstAttribute="top" secondItem="7aL-hx-agg" secondAttribute="bottom" id="2Zi-0k-rx7"/>
-                            <constraint firstItem="STU-Zk-Vdw" firstAttribute="top" secondItem="nwG-CN-BOr" secondAttribute="bottom" id="E6J-37-S4f"/>
-                            <constraint firstAttribute="centerX" secondItem="nwG-CN-BOr" secondAttribute="centerX" id="fkw-kI-eU6"/>
-                            <constraint firstItem="nwG-CN-BOr" firstAttribute="width" secondItem="DWU-YR-twG" secondAttribute="width" id="klz-c0-6Q4"/>
+                            <constraint firstAttribute="width" secondItem="nwG-CN-BOr" secondAttribute="width" id="ioX-Ia-4ug"/>
+                            <constraint firstAttribute="centerX" secondItem="nwG-CN-BOr" secondAttribute="centerX" id="k0z-yL-ZcM"/>
+                            <constraint firstItem="STU-Zk-Vdw" firstAttribute="bottom" secondItem="nwG-CN-BOr" secondAttribute="bottom" id="npv-5z-PMD"/>
+                            <constraint firstItem="nwG-CN-BOr" firstAttribute="top" secondItem="7aL-hx-agg" secondAttribute="top" id="zDQ-bE-z7Y"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="校历" image="calendar-7" id="emS-qG-SFN"/>
+                    <navigationItem key="navigationItem" title="校历" id="aME-mF-mW9"/>
                     <connections>
                         <outlet property="webView" destination="nwG-CN-BOr" id="8Cm-WT-GJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DV-fT-YUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="1391"/>
+            <point key="canvasLocation" x="1744" y="1397"/>
         </scene>
         <!--设置-->
         <scene sceneID="Z4B-G0-Ys9">
@@ -406,16 +406,17 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="sTC-JJ-XUr" kind="relationship" relationship="viewControllers" id="yIi-WT-Lyj"/>
-                        <segue destination="R7e-eD-lsG" kind="relationship" relationship="viewControllers" id="pKZ-jw-0fw"/>
+                        <segue destination="f6G-vg-dIf" kind="relationship" relationship="viewControllers" id="K5M-fa-ZTR"/>
                         <segue destination="cR2-eP-0Su" kind="relationship" relationship="viewControllers" id="KfZ-x6-lH5"/>
                         <segue destination="IAV-mk-iee" kind="relationship" relationship="viewControllers" id="Y6U-9f-l7X"/>
                         <segue destination="x4T-I3-jIk" kind="relationship" relationship="viewControllers" id="Gto-e6-mtQ"/>
+                        <segue destination="yGE-6G-YRq" kind="relationship" relationship="viewControllers" id="9xh-np-Qib"/>
+                        <segue destination="xEO-gM-2FZ" kind="relationship" relationship="viewControllers" id="jbi-rb-Fnp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRV-te-EVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="3480"/>
+            <point key="canvasLocation" x="77" y="3474"/>
         </scene>
         <!--个人课表-->
         <scene sceneID="y6z-J3-Dgn">
@@ -540,20 +541,148 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fAB-OZ-1uQ" firstAttribute="leading" secondItem="cBI-H8-XV0" secondAttribute="leading" id="5Bi-C1-VqH"/>
-                            <constraint firstItem="fAB-OZ-1uQ" firstAttribute="top" secondItem="cBI-H8-XV0" secondAttribute="top" id="JoJ-cS-Ij9"/>
-                            <constraint firstAttribute="trailing" secondItem="fAB-OZ-1uQ" secondAttribute="trailing" id="TPg-V3-Maf"/>
-                            <constraint firstItem="fAB-OZ-1uQ" firstAttribute="bottom" secondItem="ahO-tz-JfW" secondAttribute="top" id="ad0-pZ-G1L"/>
+                            <constraint firstAttribute="trailing" secondItem="fAB-OZ-1uQ" secondAttribute="trailing" id="B1U-f0-Vft"/>
+                            <constraint firstItem="fAB-OZ-1uQ" firstAttribute="bottom" secondItem="ahO-tz-JfW" secondAttribute="top" id="EQ4-JK-JHu"/>
+                            <constraint firstItem="fAB-OZ-1uQ" firstAttribute="leading" secondItem="cBI-H8-XV0" secondAttribute="leading" id="Hkm-Vd-vOh"/>
+                            <constraint firstItem="fAB-OZ-1uQ" firstAttribute="top" secondItem="cBI-H8-XV0" secondAttribute="top" id="Zxr-BD-CeS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="考试安排" image="note-write-7" id="6rQ-Xh-Fml"/>
+                    <navigationItem key="navigationItem" title="考试安排" id="bOP-h9-JP4"/>
                     <connections>
                         <outlet property="webView" destination="fAB-OZ-1uQ" id="DRi-IP-GGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCQ-zG-E7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="3480"/>
+            <point key="canvasLocation" x="1785" y="3452"/>
+        </scene>
+        <!--教务通知-->
+        <scene sceneID="1ei-pL-28n">
+            <objects>
+                <tableViewController id="xc5-K7-rB8" customClass="ArticlesTableViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cra-36-WHR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArticlescellIdentifier" textLabel="DoA-rA-15k" style="IBUITableViewCellStyleDefault" id="jU2-sX-xgH">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jU2-sX-xgH" id="Inc-gi-Tha">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DoA-rA-15k">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oI3-ly-qck" kind="show" identifier="ShowMoreSegue" trigger="accessoryAction" id="lPa-wD-aYl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xc5-K7-rB8" id="usE-E0-80H"/>
+                            <outlet property="delegate" destination="xc5-K7-rB8" id="WNx-KV-AdG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="教务通知" id="6c4-tf-A0Y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lcc-vC-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="4185"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Nte-c1-65r">
+            <objects>
+                <viewController id="oI3-ly-qck" customClass="PageViewController" customModule="NuaaTimeTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ho9-Dc-p5z"/>
+                        <viewControllerLayoutGuide type="bottom" id="4b8-UM-U7r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YMI-YA-Re3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JT-18-LDd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9JT-18-LDd" firstAttribute="leading" secondItem="YMI-YA-Re3" secondAttribute="leading" id="WBO-qZ-6Gf"/>
+                            <constraint firstAttribute="bottom" secondItem="9JT-18-LDd" secondAttribute="bottom" id="dAK-K0-lpm"/>
+                            <constraint firstAttribute="trailing" secondItem="9JT-18-LDd" secondAttribute="trailing" id="lp5-ex-4zp"/>
+                            <constraint firstItem="9JT-18-LDd" firstAttribute="top" secondItem="YMI-YA-Re3" secondAttribute="top" id="yxF-LI-4Qh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="9JT-18-LDd" id="FBr-e1-UAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTo-e0-uvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2441" y="4185"/>
+        </scene>
+        <!--教务通知-->
+        <scene sceneID="W5V-AI-141">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6G-vg-dIf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="教务通知" image="newspaper-7" id="dDH-Ea-u7p"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3gn-81-Ogr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xc5-K7-rB8" kind="relationship" relationship="rootViewController" id="L95-F3-AEz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKz-o2-YCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="4185"/>
+        </scene>
+        <!--考试安排-->
+        <scene sceneID="ReE-Ia-VlW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yGE-6G-YRq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="考试安排" image="note-write-7" id="6rQ-Xh-Fml"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tbt-g1-tDO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R7e-eD-lsG" kind="relationship" relationship="rootViewController" id="TqW-Wf-ob8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3B-5q-h4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="3460"/>
+        </scene>
+        <!--校历-->
+        <scene sceneID="1g6-Av-Fta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xEO-gM-2FZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="校历" image="calendar-7" id="emS-qG-SFN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A6N-nM-1Gg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sTC-JJ-XUr" kind="relationship" relationship="rootViewController" id="e4c-Nb-4OW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9mi-pN-2jz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="1397"/>
         </scene>
     </scenes>
     <resources>
@@ -561,6 +690,7 @@
         <image name="file-list-tick-7" width="30" height="30"/>
         <image name="gear-7" width="30" height="30"/>
         <image name="list-simple-7" width="30" height="30"/>
+        <image name="newspaper-7" width="30" height="30"/>
         <image name="note-write-7" width="30" height="30"/>
     </resources>
 </document>

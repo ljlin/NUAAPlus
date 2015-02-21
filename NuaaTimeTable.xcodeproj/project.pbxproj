@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF13E95D1A9876560078EFA3 /* Do-not-upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13E95C1A9876560078EFA3 /* Do-not-upload.swift */; };
+		BF13E9631A987C6F0078EFA3 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13E9621A987C6F0078EFA3 /* ArticlesTableViewController.swift */; };
+		BF13E9651A988B9C0078EFA3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13E9641A988B9C0078EFA3 /* PageViewController.swift */; };
 		BF219E661A94D93700B36753 /* libSVProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8AA1A93A1CE009E8040 /* libSVProgressHUD.a */; };
 		BF2ED1771A92221C0030482C /* UserInfoSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */; };
 		BF2ED1791A922BA90030482C /* ExamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED1781A922BA90030482C /* ExamListViewController.swift */; };
@@ -114,6 +116,8 @@
 
 /* Begin PBXFileReference section */
 		BF13E95C1A9876560078EFA3 /* Do-not-upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Do-not-upload.swift"; sourceTree = "<group>"; };
+		BF13E9621A987C6F0078EFA3 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
+		BF13E9641A988B9C0078EFA3 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoSettingTableViewController.swift; sourceTree = "<group>"; };
 		BF2ED1781A922BA90030482C /* ExamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListViewController.swift; sourceTree = "<group>"; };
 		BF2ED17A1A922D900030482C /* DEDUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEDUserInfo.swift; sourceTree = "<group>"; };
@@ -415,6 +419,8 @@
 				BF9409411A18C4FD00160BB6 /* CourseTableViewController.swift */,
 				BF5882501A8FB9DC00B1E571 /* SchoolCalendarViewController.swift */,
 				BFD21CC91A97875200DDDFE7 /* AttendingTableViewController.swift */,
+				BF13E9621A987C6F0078EFA3 /* ArticlesTableViewController.swift */,
+				BF13E9641A988B9C0078EFA3 /* PageViewController.swift */,
 				BF2ED1781A922BA90030482C /* ExamListViewController.swift */,
 				BF2ED1761A92221C0030482C /* UserInfoSettingTableViewController.swift */,
 				BF9409B21A18D87300160BB6 /* LoginViewController.swift */,
@@ -504,7 +510,7 @@
 				TargetAttributes = {
 					BF9409391A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = AKXV797RED;
+						DevelopmentTeam = ZRY6W7A7K7;
 					};
 					BF94094E1A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
@@ -608,11 +614,13 @@
 				BF85D0A61A97C7DE006B4E08 /* AFNetworkReachabilityManager.m in Sources */,
 				BF85D0651A97C48C006B4E08 /* DDXMLElement.m in Sources */,
 				BF85D06F1A97C498006B4E08 /* DDXMLElement+WSDL.m in Sources */,
+				BF13E9651A988B9C0078EFA3 /* PageViewController.swift in Sources */,
 				BF85D0AB1A97C7DE006B4E08 /* AFURLSessionManager.m in Sources */,
 				BFB1C8B51A93A228009E8040 /* SVIndefiniteAnimatedView.m in Sources */,
 				BF5882511A8FB9DC00B1E571 /* SchoolCalendarViewController.swift in Sources */,
 				BF85D0641A97C48C006B4E08 /* DDXMLDocument.m in Sources */,
 				BF85D0711A97C498006B4E08 /* SoapUtility.m in Sources */,
+				BF13E9631A987C6F0078EFA3 /* ArticlesTableViewController.swift in Sources */,
 				BF2ED1791A922BA90030482C /* ExamListViewController.swift in Sources */,
 				BF9409421A18C4FD00160BB6 /* CourseTableViewController.swift in Sources */,
 				BF9409B31A18D87300160BB6 /* LoginViewController.swift in Sources */,

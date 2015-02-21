@@ -93,6 +93,20 @@ class DedEngine : NSObject {
                 courses.append(DEDCourseInfo(XML: child))
             }
         }
+        courses.sort({(lef:DEDCourseInfo, rig:DEDCourseInfo) in
+            if lef.week == rig.week {
+                if lef.unit == rig.unit {
+                    return lef.kcm < rig.kcm
+                }
+                else {
+                    return lef.unit < rig.unit
+                }
+            }
+            else {
+                return lef.week < rig.week
+            }
+            
+        })
     }
     func calculateFirstSemesterMonday() -> NSDate {
         let cnLocale = NSLocale(localeIdentifier: "zh_CN")

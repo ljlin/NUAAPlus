@@ -20,14 +20,14 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
     var engine = DedEngine.sharedInstance
     var delegate : LoginDelegate? = nil
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    func setupUI(){
         var xnIdx = 1, xqIdx = 0, switchValue = false;
         if let user = self.engine.userInfo {
             self.xhTextField.text = user.xh
             switchValue = user.setSemesterDateManually
             xnIdx = $.indexOf(self.xnArray,value: user.xn)!
             xqIdx = $.indexOf(self.xqArray,value: user.xq)!
+            self.semesterDatePicker.setDate(self.engine.calculateFirstSemesterMonday(), animated: true)
         }
         else if let xh = NSUserDefaults.standardUserDefaults().stringForKey("xh_preference") {
             self.xhTextField.text = xh
@@ -40,6 +40,10 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         }
         self.xn = self.xnArray[xnIdx]
         self.xq = self.xqArray[xqIdx]
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.setupUI()
     }
     @IBAction func saveButtonClicked(sender: UIBarButtonItem) {
         var userInfo = DEDUserInfo()
@@ -58,7 +62,7 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         
         SVProgressHUD.showSuccessWithStatus("保存成功")
         self.xhTextField.resignFirstResponder()
-        
+        self.setupUI()
         //self.pwdTextField.resignFirstResponder()
     }
     @IBAction func CleanButtonClicked(sender: AnyObject) {
