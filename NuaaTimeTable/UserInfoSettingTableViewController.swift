@@ -23,12 +23,11 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         var xnIdx = 1, xqIdx = 0, switchValue = false;
-        if let data = NSUserDefaults.standardUserDefaults().objectForKey("DEDUserInfo") as? NSData {
-            self.engine.userInfo = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? DEDUserInfo
-            self.xhTextField.text = self.engine.userInfo!.xh
-            switchValue = self.engine.userInfo!.setSemesterDateManually
-            xnIdx = $.indexOf(self.xnArray,value: self.engine.userInfo!.xn)!
-            xqIdx = $.indexOf(self.xqArray,value: self.engine.userInfo!.xq)!
+        if let user = self.engine.userInfo {
+            self.xhTextField.text = user.xh
+            switchValue = user.setSemesterDateManually
+            xnIdx = $.indexOf(self.xnArray,value: user.xn)!
+            xqIdx = $.indexOf(self.xqArray,value: user.xq)!
         }
         else if let xh = NSUserDefaults.standardUserDefaults().stringForKey("xh_preference") {
             self.xhTextField.text = xh
@@ -63,7 +62,7 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         //self.pwdTextField.resignFirstResponder()
     }
     @IBAction func CleanButtonClicked(sender: AnyObject) {
-        for key in ["DEDUserInfo","CourseTableXML","xh_preference"] {
+        for key in ["DEDUserInfo","CourseTableXML","xh_preference","AttendingsJSONData"] {
             NSUserDefaults.standardUserDefaults().removeObjectForKey(key)
         }
     }

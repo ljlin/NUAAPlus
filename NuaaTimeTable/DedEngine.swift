@@ -13,7 +13,13 @@ import Dollar
 class DedEngine : NSObject {
     var courses = [DEDCourseInfo]()
     var eventStore = EKEventStore()
-    lazy var userInfo : DEDUserInfo? = nil
+    lazy var userInfo : DEDUserInfo? = {
+        var user : DEDUserInfo? = nil
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("DEDUserInfo") as? NSData {
+            user = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? DEDUserInfo
+        }
+        return user
+    }()
     class var sharedInstance : DedEngine {
         struct Singleton {
             static let instance = DedEngine()

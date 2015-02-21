@@ -52,6 +52,7 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier: String = "courseInfoCellIdentifier"
         var cell: CourseInfoCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as CourseInfoCell?
+
         if cell == nil {
             cell = CourseInfoCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
         }
