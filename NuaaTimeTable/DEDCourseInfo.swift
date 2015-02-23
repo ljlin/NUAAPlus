@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Dollar
 
 class DEDCourseInfo: NSObject, LLKVCoding {
     
@@ -36,8 +35,12 @@ class DEDCourseInfo: NSObject, LLKVCoding {
     
     init(XML:AEXMLElement) {
         super.init()
-        $.each(DEDCourseInfo.keysForStringProperty,{ self.setValue(XML[$0].value,        forKeyPath: $0)})
-        $.each(DEDCourseInfo.keysForIntProperty,   { self.setValue(XML[$0].value.toInt(),forKeyPath: $0)})
+        for key in DEDCourseInfo.keysForStringProperty {
+            self.setValue(XML[key].value,forKeyPath:key)
+        }
+        for key in DEDCourseInfo.keysForIntProperty {
+            self.setValue(XML[key].value.toInt(),forKeyPath:key)
+        }
         var weekStringArray : [String] = XML["weeks"].value.componentsSeparatedByString(",")
         self.weeks = weekStringArray.map({$0.toInt()!})
     }

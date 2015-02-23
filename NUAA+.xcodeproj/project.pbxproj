@@ -48,6 +48,7 @@
 		BF9409AD1A18CB7500160BB6 /* DedEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AC1A18CB7500160BB6 /* DedEngine.swift */; };
 		BF9409AF1A18CC3100160BB6 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409AE1A18CC3100160BB6 /* AEXML.swift */; };
 		BF9409B31A18D87300160BB6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9409B21A18D87300160BB6 /* LoginViewController.swift */; };
+		BF9BF6201A9A1550002214F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9BF61F1A9A1550002214F8 /* StoreKit.framework */; };
 		BFB1C8B51A93A228009E8040 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1C8B01A93A228009E8040 /* SVIndefiniteAnimatedView.m */; };
 		BFB1C8B71A93A228009E8040 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1C8B41A93A228009E8040 /* SVProgressHUD.m */; };
 		BFB1C8B91A93A245009E8040 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8B81A93A245009E8040 /* QuartzCore.framework */; };
@@ -56,8 +57,6 @@
 		BFD21CBF1A971C9100DDDFE7 /* DEDUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED17A1A922D900030482C /* DEDUserInfo.swift */; };
 		BFD21CC01A9721E100DDDFE7 /* ToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4600A71A8F4869007C0BC3 /* ToolBox.swift */; };
 		BFD21CCA1A97875200DDDFE7 /* AttendingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD21CC91A97875200DDDFE7 /* AttendingTableViewController.swift */; };
-		BFF2A0BA1A95107200C092EA /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8C11A93A2EB009E8040 /* Dollar.framework */; };
-		BFF2A0BB1A95107200C092EA /* Dollar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFB1C8C11A93A2EB009E8040 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFF2A0C91A97028C00C092EA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFF2A0C81A97028C00C092EA /* Settings.bundle */; };
 		BFFB073E1A925747008EFE01 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB073D1A925747008EFE01 /* Async.swift */; };
 /* End PBXBuildFile section */
@@ -77,27 +76,6 @@
 			remoteGlobalIDString = 65F021FC15C857EF0030BBEF;
 			remoteInfo = SVProgressHUD;
 		};
-		BFB1C8C01A93A2EB009E8040 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 92E0D03C19467C67002ACC3D;
-			remoteInfo = Dollar;
-		};
-		BFB1C8C21A93A2EB009E8040 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 92E6686F19F09C6400BB4FB8;
-			remoteInfo = DollarTests;
-		};
-		BFF2A0BC1A95107200C092EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 92E0D03B19467C67002ACC3D;
-			remoteInfo = Dollar;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,7 +85,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BFF2A0BB1A95107200C092EA /* Dollar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,14 +142,14 @@
 		BF85D0A01A97C7DE006B4E08 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		BF85D0A11A97C7DE006B4E08 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		BF85D0A21A97C7DE006B4E08 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		BF94093A1A18C4FD00160BB6 /* NuaaTimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuaaTimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF94093A1A18C4FD00160BB6 /* NUAA+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NUAA+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF94093E1A18C4FD00160BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9409411A18C4FD00160BB6 /* CourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		BF9409441A18C4FD00160BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF9409461A18C4FD00160BB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF9409491A18C4FD00160BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BF94094F1A18C4FD00160BB6 /* NuaaTimeTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuaaTimeTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF94094F1A18C4FD00160BB6 /* NUAA+Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NUAA+Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9409541A18C4FD00160BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF9409551A18C4FD00160BB6 /* NuaaTimeTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuaaTimeTableTests.swift; sourceTree = "<group>"; };
 		BF94095F1A18C5AA00160BB6 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = SOURCE_ROOT; };
@@ -183,6 +160,7 @@
 		BF9409AC1A18CB7500160BB6 /* DedEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DedEngine.swift; sourceTree = "<group>"; };
 		BF9409AE1A18CC3100160BB6 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AEXML.swift; path = NuaaTimeTable/AEXML.swift; sourceTree = "<group>"; };
 		BF9409B21A18D87300160BB6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF9BF61F1A9A1550002214F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BFB1C8A51A93A1CE009E8040 /* SVProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SVProgressHUD.xcodeproj; path = SVProgressHUD/SVProgressHUD.xcodeproj; sourceTree = "<group>"; };
 		BFB1C8AF1A93A228009E8040 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		BFB1C8B01A93A228009E8040 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
@@ -191,7 +169,6 @@
 		BFB1C8B31A93A228009E8040 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		BFB1C8B41A93A228009E8040 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		BFB1C8B81A93A245009E8040 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dollar.xcodeproj; path = Dollar.swift/Dollar/Dollar.xcodeproj; sourceTree = "<group>"; };
 		BFD21CBB1A971C3A00DDDFE7 /* UserInfoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTest.swift; sourceTree = "<group>"; };
 		BFD21CC91A97875200DDDFE7 /* AttendingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendingTableViewController.swift; sourceTree = "<group>"; };
 		BFF2A0C81A97028C00C092EA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -204,8 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF219E661A94D93700B36753 /* libSVProgressHUD.a in Frameworks */,
+				BF9BF6201A9A1550002214F8 /* StoreKit.framework in Frameworks */,
 				BFB1C8B91A93A245009E8040 /* QuartzCore.framework in Frameworks */,
-				BFF2A0BA1A95107200C092EA /* Dollar.framework in Frameworks */,
 				BF9409A21A18C7E500160BB6 /* libxml2.2.dylib in Frameworks */,
 				BF9409A01A18C7DC00160BB6 /* SystemConfiguration.framework in Frameworks */,
 				BF94099E1A18C7A600160BB6 /* MobileCoreServices.framework in Frameworks */,
@@ -320,8 +297,8 @@
 		BF94093B1A18C4FD00160BB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF94093A1A18C4FD00160BB6 /* NuaaTimeTable.app */,
-				BF94094F1A18C4FD00160BB6 /* NuaaTimeTableTests.xctest */,
+				BF94093A1A18C4FD00160BB6 /* NUAA+.app */,
+				BF94094F1A18C4FD00160BB6 /* NUAA+Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,7 +351,7 @@
 		BF9409A31A18C84000160BB6 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */,
+				BF9BF61F1A9A1550002214F8 /* StoreKit.framework */,
 				BFB1C8B81A93A245009E8040 /* QuartzCore.framework */,
 				BFB1C8AE1A93A228009E8040 /* SVProgressHUD */,
 				BFB1C8A51A93A1CE009E8040 /* SVProgressHUD.xcodeproj */,
@@ -450,21 +427,12 @@
 			path = SVProgressHUD/SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		BFB1C8BC1A93A2EB009E8040 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BFB1C8C11A93A2EB009E8040 /* Dollar.framework */,
-				BFB1C8C31A93A2EB009E8040 /* DollarTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF9409391A18C4FD00160BB6 /* NuaaTimeTable */ = {
+		BF9409391A18C4FD00160BB6 /* NUAA+ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NuaaTimeTable" */;
+			buildConfigurationList = BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+" */;
 			buildPhases = (
 				BF9409361A18C4FD00160BB6 /* Sources */,
 				BF9409371A18C4FD00160BB6 /* Frameworks */,
@@ -474,16 +442,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				BFF2A0BD1A95107200C092EA /* PBXTargetDependency */,
 			);
-			name = NuaaTimeTable;
+			name = "NUAA+";
 			productName = NuaaTimeTable;
-			productReference = BF94093A1A18C4FD00160BB6 /* NuaaTimeTable.app */;
+			productReference = BF94093A1A18C4FD00160BB6 /* NUAA+.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BF94094E1A18C4FD00160BB6 /* NuaaTimeTableTests */ = {
+		BF94094E1A18C4FD00160BB6 /* NUAA+Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NuaaTimeTableTests" */;
+			buildConfigurationList = BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+Tests" */;
 			buildPhases = (
 				BF94094B1A18C4FD00160BB6 /* Sources */,
 				BF94094C1A18C4FD00160BB6 /* Frameworks */,
@@ -494,9 +461,9 @@
 			dependencies = (
 				BF9409511A18C4FD00160BB6 /* PBXTargetDependency */,
 			);
-			name = NuaaTimeTableTests;
+			name = "NUAA+Tests";
 			productName = NuaaTimeTableTests;
-			productReference = BF94094F1A18C4FD00160BB6 /* NuaaTimeTableTests.xctest */;
+			productReference = BF94094F1A18C4FD00160BB6 /* NUAA+Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -511,6 +478,11 @@
 					BF9409391A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = ZRY6W7A7K7;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					BF94094E1A18C4FD00160BB6 = {
 						CreatedOnToolsVersion = 6.1;
@@ -518,7 +490,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NuaaTimeTable" */;
+			buildConfigurationList = BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NUAA+" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -531,18 +503,14 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BFB1C8BC1A93A2EB009E8040 /* Products */;
-					ProjectRef = BFB1C8BB1A93A2EB009E8040 /* Dollar.xcodeproj */;
-				},
-				{
 					ProductGroup = BFB1C8A61A93A1CE009E8040 /* Products */;
 					ProjectRef = BFB1C8A51A93A1CE009E8040 /* SVProgressHUD.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				BF9409391A18C4FD00160BB6 /* NuaaTimeTable */,
-				BF94094E1A18C4FD00160BB6 /* NuaaTimeTableTests */,
+				BF9409391A18C4FD00160BB6 /* NUAA+ */,
+				BF94094E1A18C4FD00160BB6 /* NUAA+Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -553,20 +521,6 @@
 			fileType = archive.ar;
 			path = libSVProgressHUD.a;
 			remoteRef = BFB1C8A91A93A1CE009E8040 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BFB1C8C11A93A2EB009E8040 /* Dollar.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Dollar.framework;
-			remoteRef = BFB1C8C01A93A2EB009E8040 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BFB1C8C31A93A2EB009E8040 /* DollarTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DollarTests.xctest;
-			remoteRef = BFB1C8C21A93A2EB009E8040 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -654,13 +608,8 @@
 /* Begin PBXTargetDependency section */
 		BF9409511A18C4FD00160BB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF9409391A18C4FD00160BB6 /* NuaaTimeTable */;
+			target = BF9409391A18C4FD00160BB6 /* NUAA+ */;
 			targetProxy = BF9409501A18C4FD00160BB6 /* PBXContainerItemProxy */;
-		};
-		BFF2A0BD1A95107200C092EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Dollar;
-			targetProxy = BFF2A0BC1A95107200C092EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -773,8 +722,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NuaaTimeTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NUAA+";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -793,8 +743,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NuaaTimeTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NUAA+";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -815,7 +766,7 @@
 				);
 				INFOPLIST_FILE = NuaaTimeTableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NUAA+Tests";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/lijianlin/Projects/NUAATimeTable/NuaaTimeTableTests/BridgeForTest.h;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuaaTimeTable.app/NuaaTimeTable";
 			};
@@ -831,7 +782,7 @@
 				);
 				INFOPLIST_FILE = NuaaTimeTableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NUAA+Tests";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/lijianlin/Projects/NUAATimeTable/NuaaTimeTableTests/BridgeForTest.h;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuaaTimeTable.app/NuaaTimeTable";
 			};
@@ -840,7 +791,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NuaaTimeTable" */ = {
+		BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NUAA+" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF9409571A18C4FD00160BB6 /* Debug */,
@@ -849,7 +800,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NuaaTimeTable" */ = {
+		BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF94095A1A18C4FD00160BB6 /* Debug */,
@@ -858,7 +809,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NuaaTimeTableTests" */ = {
+		BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF94095D1A18C4FD00160BB6 /* Debug */,

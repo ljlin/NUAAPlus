@@ -8,7 +8,6 @@
 
 import Foundation
 import EventKit
-import Dollar
 
 class DedEngine : NSObject {
     var courses = [DEDCourseInfo]()

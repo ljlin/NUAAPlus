@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Dollar
 
 class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIAlertViewDelegate {
     var engine = DedEngine.sharedInstance

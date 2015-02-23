@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Dollar
 
 class UserInfoSettingTableViewController: UITableViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
@@ -16,6 +15,7 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
     @IBOutlet weak var xnxqPickerView: UIPickerView!
     @IBOutlet weak var setDateManually: UISwitch!
     @IBOutlet weak var semesterDatePicker: UIDatePicker!
+    @IBOutlet weak var dateCell: UITableViewCell!
     
     var engine = DedEngine.sharedInstance
     var delegate : LoginDelegate? = nil
@@ -25,8 +25,10 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         if let user = self.engine.userInfo {
             self.xhTextField.text = user.xh
             switchValue = user.setSemesterDateManually
-            xnIdx = $.indexOf(self.xnArray,value: user.xn)!
-            xqIdx = $.indexOf(self.xqArray,value: user.xq)!
+            //xnIdx = $.indexOf(self.xnArray,value: user.xn)!
+            //xqIdx = $.indexOf(self.xqArray,value: user.xq)!
+            xnIdx = findIndex(self.xnArray, user.xn)!
+            xqIdx = findIndex(self.xqArray, user.xq)!
             self.semesterDatePicker.setDate(self.engine.calculateFirstSemesterMonday(), animated: true)
         }
         else if let xh = NSUserDefaults.standardUserDefaults().stringForKey("xh_preference") {
@@ -69,6 +71,16 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         for key in ["DEDUserInfo","CourseTableXML","xh_preference","AttendingsJSONData"] {
             NSUserDefaults.standardUserDefaults().removeObjectForKey(key)
         }
+    }
+    @IBAction func switchChanged(sender: UISwitch) {
+        if sender.on{
+            self.semesterDatePicker.enabled = false //=  UIControlState.Disabled
+            NSLog("rdfsfsgf")
+        }
+        else {
+            self.semesterDatePicker.enabled = true //.state = UIControlState.Normal
+        }
+
     }
     
     //PickerView

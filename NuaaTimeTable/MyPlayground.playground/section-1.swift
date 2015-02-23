@@ -146,6 +146,16 @@ class DEDUserInfo: NSObject, NSCoding {
     
 }
 
+
+func findIndex<T: Equatable>(array: [T], valueToFind: T) -> Int? {
+    for (index, value) in enumerate(array) {
+        if value == valueToFind {
+            return index
+        }
+    }
+    return nil
+}
+
 /*
 
 var t = DEDUserInfo()
@@ -166,7 +176,7 @@ var newObj: DEDUserInfo = NSKeyedUnarchiver.unarchiveObjectWithData(newData) as 
 NSLog("%@", newObj.xh)
 
 */
-
+/*
 
 var yz = "yvtfytfv&&^BGUYgn&HN*&HN*n2014-20151051330316GVF$%#^%FTVsdfa&G&*H(*JOIJdsf:LKPO:".md5
 println(yz);
@@ -183,7 +193,7 @@ let data = json.dataUsingEncoding(NSUTF8StringEncoding)!
 //let ddd = dic.firstObject as [String : String]
 
 //ddd["kcm"]
-
+*/
 
 
 
