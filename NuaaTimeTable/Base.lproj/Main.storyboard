@@ -427,7 +427,7 @@
         <scene sceneID="y6z-J3-Dgn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IAV-mk-iee" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="个人课表" image="list-simple-7" id="Fj0-Gz-9sC"/>
+                    <tabBarItem key="tabBarItem" title="个人课表" image="notepad_L" id="Fj0-Gz-9sC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ep9-gF-pPr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -446,7 +446,7 @@
         <scene sceneID="gnb-QI-7Av">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x4T-I3-jIk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设置" image="gear-7" id="ZKQ-bq-Ike"/>
+                    <tabBarItem key="tabBarItem" title="设置" image="ID_card_L" id="ZKQ-bq-Ike"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BX9-kR-xBi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -512,7 +512,7 @@
         <scene sceneID="EhX-XE-dw9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cR2-eP-0Su" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="修读课程" image="file-list-tick-7" id="Goc-ee-KFN"/>
+                    <tabBarItem key="tabBarItem" title="修读课程" image="memo_L" id="Goc-ee-KFN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bdI-nM-fSR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -636,7 +636,7 @@
         <scene sceneID="W5V-AI-141">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6G-vg-dIf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="教务通知" image="newspaper-7" id="dDH-Ea-u7p"/>
+                    <tabBarItem key="tabBarItem" title="教务通知" image="bulb_L" id="dDH-Ea-u7p"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3gn-81-Ogr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -655,7 +655,7 @@
         <scene sceneID="ReE-Ia-VlW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yGE-6G-YRq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="考试安排" image="note-write-7" id="6rQ-Xh-Fml"/>
+                    <tabBarItem key="tabBarItem" title="考试安排" image="pen_L" id="6rQ-Xh-Fml"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tbt-g1-tDO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -674,7 +674,7 @@
         <scene sceneID="1g6-Av-Fta">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xEO-gM-2FZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="校历" image="calendar-7" id="emS-qG-SFN"/>
+                    <tabBarItem key="tabBarItem" title="校历" image="calender_L" id="emS-qG-SFN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A6N-nM-1Gg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -691,11 +691,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar-7" width="30" height="30"/>
-        <image name="file-list-tick-7" width="30" height="30"/>
-        <image name="gear-7" width="30" height="30"/>
-        <image name="list-simple-7" width="30" height="30"/>
-        <image name="newspaper-7" width="30" height="30"/>
-        <image name="note-write-7" width="30" height="30"/>
+        <image name="ID_card_L" width="32" height="30"/>
+        <image name="bulb_L" width="30" height="30"/>
+        <image name="calender_L" width="30" height="30"/>
+        <image name="memo_L" width="30" height="30"/>
+        <image name="notepad_L" width="30" height="30"/>
+        <image name="pen_L" width="30" height="30"/>
     </resources>
 </document>

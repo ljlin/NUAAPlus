@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 
 class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIAlertViewDelegate {
     var engine = DedEngine.sharedInstance
@@ -37,6 +38,17 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
         }
         actionSheet.cancelButtonIndex = actionSheet.addButtonWithTitle("取消")
         actionSheet.showFromBarButtonItem(rightBarButton,animated: true)
+    }
+    override func viewDidLoad() {
+        if EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) != EKAuthorizationStatus.Authorized {
+            self.engine.eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:{(granted:Bool, error:NSError?) in
+                if granted {
+                }
+                else{
+                    SVProgressHUD.showErrorWithStatus("请允许NUAA+访问日历")
+                }
+            })
+        }
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -72,7 +84,7 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
             alertView.alertViewStyle = UIAlertViewStyle.PlainTextInput;
             alertView.show()
         case actionSheet.cancelButtonIndex :
-            self.engine.calculateFirstSemesterMonday()
+            //self.engine.calculateFirstSemesterMonday()
             return
         default:
             SVProgressHUD.show()

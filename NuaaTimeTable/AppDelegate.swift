@@ -12,12 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         //SVProgressHUD.setBackgroundColor(UIColor(red: 100/255, green: 200/255, blue: 255/255, alpha: 0.5))
         SVProgressHUD.setBackgroundColor(UIColor.grayColor().colorWithAlphaComponent(0.3))
+        let tabBarController = self.window?.rootViewController as UITabBarController
+        let imageNames = ["bulb_F","memo_F","notepad_F","ID_card_F","pen_F","calender_F"]
+        for (index, imageName) in enumerate(imageNames) {
+            if let  item = tabBarController.tabBar.items![index] as? UITabBarItem {
+                item.selectedImage = UIImage(named: imageName)
+            }
+        }
         return true
     }
 

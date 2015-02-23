@@ -36,7 +36,7 @@ class DedEngine : NSObject {
                     success("")
                 }
                 else{
-                    SVProgressHUD.showErrorWithStatus("请在程序允许方法日历")
+                    SVProgressHUD.showErrorWithStatus("请允许NUAA+访问日历")
                 }
             })
         }
@@ -47,6 +47,10 @@ class DedEngine : NSObject {
             res = self.eventStore.calendarsForEntityType(EKEntityTypeEvent).filter({
                 ($0 as EKCalendar).source.title == "iCloud"
             })
+            if res.count == 0 {
+                res = self.eventStore.calendarsForEntityType(EKEntityTypeEvent)
+            }
+            self.calendars = res as [EKCalendar]
         })
         return res as [EKCalendar]
     }
@@ -132,17 +136,24 @@ class DedEngine : NSObject {
         return approx!.dateByAddingTimeInterval(Double(timeInterval))
     }
     func importEvents(calendar:EKCalendar){
-        self.requestAccessToEKEntityTypeEvent({(_) in self.importEventsImp(calendar)})
+        self.requestAccessToEKEntityTypeEvent({(_) in
+            if self.userInfo != nil {
+                self.importEventsImp(calendar)
+            }
+        })
     }
     func importEventsImp(calendar:EKCalendar){
-        var semesterDate : NSDate = {
-            if let manually = self.userInfo?.setSemesterDateManually {
-                if manually {
-                    return self.userInfo!.semesterDate
-                }
+        var semesterDate : NSDate = self.userInfo!.setSemesterDateManually ?
+                                    self.userInfo!.semesterDate :
+                                    self.calculateFirstSemesterMonday()
+            /*{
+        
+            if self.userInfo!.setSemesterDateManually {
+                return self.userInfo!.semesterDate
             }
             return self.calculateFirstSemesterMonday()
-        }()
+
+        }()*/
      
         let minutes = 60 , hours = 60 * minutes
         //[8*60*60,10*60*60+15*60,14*60*60,16*60*60+15*60,18*60*60+30*60]
