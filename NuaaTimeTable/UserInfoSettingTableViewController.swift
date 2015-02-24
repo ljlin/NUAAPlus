@@ -85,7 +85,7 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
     
     //PickerView
     
-    let xnArray = ["2013-2014","2014-2015","2015-2016","2016-2017"]
+    let xnArray = ["2013-2014","2014-2015"]// ["2013-2014","2014-2015","2015-2016","2016-2017"]
     let xqArray = ["1","2"]
     var xn = "hehe"
     var xq = "haha"

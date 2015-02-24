@@ -1,0 +1,108 @@
+
+/* Class = "IBUILabel"; text = "学号"; ObjectID = "2Jf-kY-lV1"; */
+"2Jf-kY-lV1.text" = "学号";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "4CT-CT-4NV"; */
+"4CT-CT-4NV.text" = "Label";
+
+/* Class = "IBUINavigationItem"; title = "教务通知"; ObjectID = "6c4-tf-A0Y"; */
+"6c4-tf-A0Y.title" = "教务通知";
+
+/* Class = "IBUITabBarItem"; title = "考试安排"; ObjectID = "6rQ-Xh-Fml"; */
+"6rQ-Xh-Fml.title" = "考试安排";
+
+/* Class = "IBUIBarButtonItem"; title = "获取"; ObjectID = "BE1-iG-lmZ"; */
+"BE1-iG-lmZ.title" = "获取";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "DoA-rA-15k"; */
+"DoA-rA-15k.text" = "Title";
+
+/* Class = "IBUITabBarItem"; title = "个人课表"; ObjectID = "Fj0-Gz-9sC"; */
+"Fj0-Gz-9sC.title" = "个人课表";
+
+/* Class = "IBUITabBarItem"; title = "修读课程"; ObjectID = "Goc-ee-KFN"; */
+"Goc-ee-KFN.title" = "修读课程";
+
+/* Class = "IBUINavigationItem"; title = "个人课表"; ObjectID = "K5v-s5-0Vr"; */
+"K5v-s5-0Vr.title" = "个人课表";
+
+/* Class = "IBUILabel"; text = "教师姓名"; ObjectID = "Ogs-D1-kQh"; */
+"Ogs-D1-kQh.text" = "教师姓名";
+
+/* Class = "IBUILabel"; text = "学年学期"; ObjectID = "PSs-Y5-ucO"; */
+"PSs-Y5-ucO.text" = "学年学期";
+
+/* Class = "IBUIButton"; normalTitle = "清除所有数据"; ObjectID = "SKe-Fu-3Cp"; */
+"SKe-Fu-3Cp.normalTitle" = "清除所有数据";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "U24-Kp-m1L"; */
+"U24-Kp-m1L.text" = "Label";
+
+/* Class = "IBUILabel"; text = "教室号"; ObjectID = "UT0-H7-Fso"; */
+"UT0-H7-Fso.text" = "教室号";
+
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "Vsq-Lg-dYq"; */
+"Vsq-Lg-dYq.normalTitle" = "Cancel";
+
+/* Class = "IBUILabel"; text = "课程名"; ObjectID = "XpE-vw-9gI"; */
+"XpE-vw-9gI.text" = "课程名";
+
+/* Class = "IBUITabBarItem"; title = "设置"; ObjectID = "ZKQ-bq-Ike"; */
+"ZKQ-bq-Ike.title" = "设置";
+
+/* Class = "IBUILabel"; text = "时间"; ObjectID = "aIE-VX-3PR"; */
+"aIE-VX-3PR.text" = "时间";
+
+/* Class = "IBUINavigationItem"; title = "校历"; ObjectID = "aME-mF-mW9"; */
+"aME-mF-mW9.title" = "校历";
+
+/* Class = "IBUIBarButtonItem"; title = "保存"; ObjectID = "b3J-aJ-E5e"; */
+"b3J-aJ-E5e.title" = "保存";
+
+/* Class = "IBUINavigationItem"; title = "考试安排"; ObjectID = "bOP-h9-JP4"; */
+"bOP-h9-JP4.title" = "考试安排";
+
+/* Class = "IBUITabBarItem"; title = "教务通知"; ObjectID = "dDH-Ea-u7p"; */
+"dDH-Ea-u7p.title" = "教务通知";
+
+/* Class = "IBUIButton"; normalTitle = "GET"; ObjectID = "e4l-TL-qsE"; */
+"e4l-TL-qsE.normalTitle" = "GET";
+
+/* Class = "IBUITextField"; text = "161310120"; ObjectID = "eQS-kb-T8U"; */
+"eQS-kb-T8U.text" = "161310120";
+
+/* Class = "IBUITabBarItem"; title = "校历"; ObjectID = "emS-qG-SFN"; */
+"emS-qG-SFN.title" = "校历";
+
+/* Class = "IBUIBarButtonItem"; title = "导入"; ObjectID = "frs-uf-wnt"; */
+"frs-uf-wnt.title" = "导入";
+
+/* Class = "IBUINavigationItem"; title = "设置"; ObjectID = "gnh-Yc-Ogf"; */
+"gnh-Yc-Ogf.title" = "设置";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "igo-cz-nt6"; */
+"igo-cz-nt6.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "学号"; ObjectID = "p2I-pi-VHx"; */
+"p2I-pi-VHx.text" = "学号";
+
+/* Class = "IBUINavigationItem"; title = "修读课程"; ObjectID = "qYa-DP-Kjt"; */
+"qYa-DP-Kjt.title" = "修读课程";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "rpd-iO-bka"; */
+"rpd-iO-bka.text" = "Title";
+
+/* Class = "IBUIViewController"; title = "CalendarViewController"; ObjectID = "sTC-JJ-XUr"; */
+"sTC-JJ-XUr.title" = "CalendarViewController";
+
+/* Class = "IBUILabel"; text = "手动为本学期第一天设置日期"; ObjectID = "vOd-s4-Y2D"; */
+"vOd-s4-Y2D.text" = "手动为本学期第一天设置日期";
+
+/* Class = "IBUIBarButtonItem"; title = "获取"; ObjectID = "xeI-O6-CRZ"; */
+"xeI-O6-CRZ.title" = "获取";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "xuo-YW-baz"; */
+"xuo-YW-baz.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "y75-LL-6ED"; */
+"y75-LL-6ED.text" = "Label";

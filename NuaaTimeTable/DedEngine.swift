@@ -50,7 +50,6 @@ class DedEngine : NSObject {
             if res.count == 0 {
                 res = self.eventStore.calendarsForEntityType(EKEntityTypeEvent)
             }
-            self.calendars = res as [EKCalendar]
         })
         return res as [EKCalendar]
     }
@@ -192,11 +191,12 @@ class DedEngine : NSObject {
     }
     func creatCalendarby(title:String) -> EKCalendar? {
         var calendar : EKCalendar? = nil
-        let sources = (self.eventStore.sources() as [EKSource]).filter {
+        let allSources = self.eventStore.sources()
+        let sources = (allSources as [EKSource]).filter {
            ($0.title == "iCloud")&&($0.sourceType.value == EKSourceTypeCalDAV.value)
         }
         var localSource : EKSource? = sources.isEmpty ?
-                                        (self.eventStore.sources() as [EKSource]).first :
+                                        (allSources as [EKSource]).first :
                                         sources.first
         calendar = EKCalendar(forEntityType:EKEntityTypeEvent , eventStore:self.eventStore)
         calendar?.title = title;

@@ -142,14 +142,14 @@
 		BF85D0A01A97C7DE006B4E08 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		BF85D0A11A97C7DE006B4E08 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		BF85D0A21A97C7DE006B4E08 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		BF94093A1A18C4FD00160BB6 /* NUAA+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NUAA+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF94093A1A18C4FD00160BB6 /* NUAAPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NUAAPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF94093E1A18C4FD00160BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF94093F1A18C4FD00160BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9409411A18C4FD00160BB6 /* CourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		BF9409441A18C4FD00160BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF9409461A18C4FD00160BB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF9409491A18C4FD00160BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BF94094F1A18C4FD00160BB6 /* NUAA+Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NUAA+Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF94094F1A18C4FD00160BB6 /* NUAAPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NUAAPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9409541A18C4FD00160BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF9409551A18C4FD00160BB6 /* NuaaTimeTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuaaTimeTableTests.swift; sourceTree = "<group>"; };
 		BF94095F1A18C5AA00160BB6 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = SOURCE_ROOT; };
@@ -297,8 +297,8 @@
 		BF94093B1A18C4FD00160BB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF94093A1A18C4FD00160BB6 /* NUAA+.app */,
-				BF94094F1A18C4FD00160BB6 /* NUAA+Tests.xctest */,
+				BF94093A1A18C4FD00160BB6 /* NUAAPlus.app */,
+				BF94094F1A18C4FD00160BB6 /* NUAAPlusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,9 +430,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF9409391A18C4FD00160BB6 /* NUAA+ */ = {
+		BF9409391A18C4FD00160BB6 /* NUAAPlus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+" */;
+			buildConfigurationList = BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAAPlus" */;
 			buildPhases = (
 				BF9409361A18C4FD00160BB6 /* Sources */,
 				BF9409371A18C4FD00160BB6 /* Frameworks */,
@@ -443,14 +443,14 @@
 			);
 			dependencies = (
 			);
-			name = "NUAA+";
+			name = NUAAPlus;
 			productName = NuaaTimeTable;
-			productReference = BF94093A1A18C4FD00160BB6 /* NUAA+.app */;
+			productReference = BF94093A1A18C4FD00160BB6 /* NUAAPlus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BF94094E1A18C4FD00160BB6 /* NUAA+Tests */ = {
+		BF94094E1A18C4FD00160BB6 /* NUAAPlusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+Tests" */;
+			buildConfigurationList = BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAAPlusTests" */;
 			buildPhases = (
 				BF94094B1A18C4FD00160BB6 /* Sources */,
 				BF94094C1A18C4FD00160BB6 /* Frameworks */,
@@ -461,9 +461,9 @@
 			dependencies = (
 				BF9409511A18C4FD00160BB6 /* PBXTargetDependency */,
 			);
-			name = "NUAA+Tests";
+			name = NUAAPlusTests;
 			productName = NuaaTimeTableTests;
-			productReference = BF94094F1A18C4FD00160BB6 /* NUAA+Tests.xctest */;
+			productReference = BF94094F1A18C4FD00160BB6 /* NUAAPlusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -490,7 +490,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NUAA+" */;
+			buildConfigurationList = BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NUAAPlus" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -509,8 +509,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				BF9409391A18C4FD00160BB6 /* NUAA+ */,
-				BF94094E1A18C4FD00160BB6 /* NUAA+Tests */,
+				BF9409391A18C4FD00160BB6 /* NUAAPlus */,
+				BF94094E1A18C4FD00160BB6 /* NUAAPlusTests */,
 			);
 		};
 /* End PBXProject section */
@@ -608,7 +608,7 @@
 /* Begin PBXTargetDependency section */
 		BF9409511A18C4FD00160BB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BF9409391A18C4FD00160BB6 /* NUAA+ */;
+			target = BF9409391A18C4FD00160BB6 /* NUAAPlus */;
 			targetProxy = BF9409501A18C4FD00160BB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -650,7 +650,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -670,6 +672,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "0e7a2e14-6799-46d7-8448-3679f59fd68e";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -692,7 +695,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yanlin Liu";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -705,6 +709,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "6c63ce84-1050-4a8a-b959-b0f1df10495a";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -715,17 +720,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yanlin Liu (U7E32FEDXA)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NuaaTimeTable/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "NUAA+";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = NUAAPlus;
+				PROVISIONING_PROFILE = "0e7a2e14-6799-46d7-8448-3679f59fd68e";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -736,17 +741,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yanlin Liu";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NuaaTimeTable/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "NUAA+";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = NUAAPlus;
+				PROVISIONING_PROFILE = "6c63ce84-1050-4a8a-b959-b0f1df10495a";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -766,7 +771,7 @@
 				);
 				INFOPLIST_FILE = NuaaTimeTableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "NUAA+Tests";
+				PRODUCT_NAME = NUAAPlusTests;
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/lijianlin/Projects/NUAATimeTable/NuaaTimeTableTests/BridgeForTest.h;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuaaTimeTable.app/NuaaTimeTable";
 			};
@@ -782,7 +787,7 @@
 				);
 				INFOPLIST_FILE = NuaaTimeTableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "NUAA+Tests";
+				PRODUCT_NAME = NUAAPlusTests;
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/lijianlin/Projects/NUAATimeTable/NuaaTimeTableTests/BridgeForTest.h;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuaaTimeTable.app/NuaaTimeTable";
 			};
@@ -791,7 +796,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NUAA+" */ = {
+		BF9409351A18C4FD00160BB6 /* Build configuration list for PBXProject "NUAAPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF9409571A18C4FD00160BB6 /* Debug */,
@@ -800,7 +805,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+" */ = {
+		BF9409591A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAAPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF94095A1A18C4FD00160BB6 /* Debug */,
@@ -809,7 +814,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAA+Tests" */ = {
+		BF94095C1A18C4FD00160BB6 /* Build configuration list for PBXNativeTarget "NUAAPlusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF94095D1A18C4FD00160BB6 /* Debug */,

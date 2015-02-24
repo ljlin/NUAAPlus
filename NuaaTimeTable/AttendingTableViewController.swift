@@ -13,7 +13,8 @@ class AttendingTableViewController: UITableViewController {
     var attendings = [[String:String]]()
 
     func analyzeJSONData(data:NSData){
-        let jsonObject = NSJSONSerialization.JSONObjectWithData( data,
+        self.attendings.removeAll(keepCapacity: false)
+        let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData( data,
                                                         options: NSJSONReadingOptions.MutableContainers,
                                                           error: nil)
         if let array = jsonObject as? [[String:String]] {
@@ -39,6 +40,8 @@ class AttendingTableViewController: UITableViewController {
                 },
                 failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
                     NSLog("%@", error)
+                    SVProgressHUD.showErrorWithStatus("请检查网络连接")
+
                 }
             )
         }

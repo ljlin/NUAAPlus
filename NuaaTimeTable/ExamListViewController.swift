@@ -15,7 +15,7 @@ class ExamListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         self.webView.scalesPageToFit = true
-        self.webView.loadRequest(NSURLRequest(URL: NSURL(string: self.baseURL + "?xn=&xq=&type=xh&key=161310120")!))
+        self.webView.loadRequest(NSURLRequest(URL: NSURL(string: self.baseURL + "?xn=&xq=&type=xh&key=161310124")!))
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

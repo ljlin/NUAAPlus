@@ -30,6 +30,7 @@ Import NUAA student timetable on iOS
 - [AFNetworking](https://github.com/afnetworking/afnetworking)
 - [Async](https://github.com/duemunk/Async)
 - [KissXML](https://github.com/robbiehanson/KissXML)
+- [snapshot](https://github.com/KrauseFx/snapshot)
 - [SOAP-IOS](https://github.com/xujialiang/SOAP-IOS)
 - [SketchActive](http://aegeank.com/sketchactive/)
 - [SVProgressHUD](https://github.com/TransitApp/SVProgressHUD)

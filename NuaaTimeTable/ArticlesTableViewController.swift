@@ -20,7 +20,7 @@ class ArticlesTableViewController: UITableViewController {
         manager.GET(baseString, parameters: nil,
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
                 let jsonData = responseObject as NSData
-                let jsonObject = NSJSONSerialization.JSONObjectWithData( jsonData,
+                let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData( jsonData,
                                                                 options: NSJSONReadingOptions.MutableContainers,
                                                                   error: nil)
                 self.articles = jsonObject as [[String:String]]
