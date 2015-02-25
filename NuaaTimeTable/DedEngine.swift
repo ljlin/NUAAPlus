@@ -50,7 +50,9 @@ class DedEngine : NSObject {
             if res.count == 0 {
                 res = self.eventStore.calendarsForEntityType(EKEntityTypeEvent)
             }
+            NSLog("finish block")
         })
+        NSLog("finish getCal")
         return res as [EKCalendar]
     }
     func getCourseTableBySettings() -> Bool {
@@ -63,7 +65,7 @@ class DedEngine : NSObject {
         }
     }
     func getCourseTableByXh(xh : String,xn : String, xq : String) {
-        NSLog("querry = \(xh)")
+        //NSLog("querry = \(xh)")
         self.courses.removeAll()
         let dic = ["xn":xn,"xq":xq,"xh":xh]
         let utility = SoapUtility(fromFile: "NuaaDedWebService")
@@ -110,11 +112,19 @@ class DedEngine : NSObject {
             
         })
     }
-    func calculateFirstSemesterMonday() -> NSDate {
+    func calculateFirstSemesterMondaybySetting() -> NSDate {
+        if let user = self.userInfo {
+            return self.calculateFirstSemesterMondaybyxn(user.xn, andxq: user.xq)
+        }
+        else {
+            return NSDate()
+        }
+    }
+    func calculateFirstSemesterMondaybyxn(xn:String,andxq xq:String) -> NSDate {
         let cnLocale = NSLocale(localeIdentifier: "zh_CN")
-        let yearArray = self.userInfo!.xn.componentsSeparatedByString("-").map({(ele: String ) in ele.toInt()!})
+        let yearArray = xn.componentsSeparatedByString("-").map({(ele: String ) in ele.toInt()!})
         var approxComp = NSDateComponents()
-        let idx = self.userInfo!.xq.toInt()! - 1
+        let idx = xq.toInt()! - 1
         approxComp <== [
             "day"   : 1,
             "month" : [9,3][idx],
@@ -144,7 +154,8 @@ class DedEngine : NSObject {
     func importEventsImp(calendar:EKCalendar){
         var semesterDate : NSDate = self.userInfo!.setSemesterDateManually ?
                                     self.userInfo!.semesterDate :
-                                    self.calculateFirstSemesterMonday()
+                                    calculateFirstSemesterMondaybySetting()
+            //self.calculateFirstSemesterMonday(self.userInfo?.xn,andxq:self.userInfo?.xq)
             /*{
         
             if self.userInfo!.setSemesterDateManually {

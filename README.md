@@ -8,13 +8,6 @@ Import NUAA student timetable on iOS
 
 其他的功能还有教务通知，查询修读课程（方便申请免修课程的同学及时查询免修申请是否通过），查询考试安排和查询校历。
 
-## Screenshots
-
-![Image](Screenshots/IMG_5191.PNG "Image")
-![Image](Screenshots/IMG_5192.PNG "Image")
-![Image](Screenshots/IMG_5193.PNG "Image")
-![Image](Screenshots/OSXScreenshot.png "Image")
-
 ## Requirements
 
 - Xcode 6.1.1 (6A2008a)
@@ -40,3 +33,14 @@ Import NUAA student timetable on iOS
 - c0r3d3v [NUAACalendarImporter](https://github.com/c0r3d3v/NUAACalendarImporter)
 - Richard Wei
 
+## Screenshots
+
+
+![Image](Screenshots/en-US-iPhone6-0-ALL-portrait.png)|![Image](Screenshots/en-US-iPhone6-0-Attending-portrait.png)|![Image](Screenshots/en-US-iPhone6-0-Calendar-portrait.png.png)
+------------ | ------------- | ------------
+![Image](Screenshots/en-US-iPhone6-0-CourseTable-portrait.png)|![Image](Screenshots/IMG_5192.PNG "Image")|![Image](Screenshots/en-US-iPhone6-0-Settings-portrait.png)
+![Image](Screenshots/IMG_5191.PNG "Image")|![Image](Screenshots/en-US-iPhone6-0-LandingScreen-portrait.png)|![Image](Screenshots/en-US-iPhone6-0-Page-portrait.png)
+
+![Image](Screenshots/IMG_0295.PNG)
+![Image](Screenshots/IMG_5193.PNG "Image")
+![Image](Screenshots/OSXScreenshot.png "Image")

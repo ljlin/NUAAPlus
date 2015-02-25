@@ -33,7 +33,8 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
                             cancelButtonTitle: nil,
                        destructiveButtonTitle: nil)
         actionSheet.addButtonWithTitle("新建日历")
-        for cal in self.engine.calendars {
+        let calendars = self.engine.calendars
+        for cal in calendars {
             actionSheet.addButtonWithTitle(cal.title)
         }
         actionSheet.cancelButtonIndex = actionSheet.addButtonWithTitle("取消")
@@ -54,6 +55,9 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
         super.viewWillAppear(animated)
         if self.engine.courses.isEmpty {
             self.engine.tryLoadCachedTable()
+        }
+        if self.engine.courses.isEmpty {
+            self.getButtonClicked(self)
         }
     }
     

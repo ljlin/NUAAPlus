@@ -11,31 +11,51 @@ import UIKit
 class ArticlesTableViewController: UITableViewController {
 
     var articles = [[String:String]]()
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var loading = false
+
+    func loadArticles() {
         SVProgressHUD.show()
+        self.loading = true
         let baseString = "http://nuaavt.sinaapp.com/chen/dedarticlesapi.php"
         var manager = AFHTTPRequestOperationManager()
         manager.responseSerializer = AFHTTPResponseSerializer()
+        manager.requestSerializer.timeoutInterval = 1
         manager.GET(baseString, parameters: nil,
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
                 let jsonData = responseObject as NSData
                 let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData( jsonData,
-                                                                options: NSJSONReadingOptions.MutableContainers,
-                                                                  error: nil)
+                    options: NSJSONReadingOptions.MutableContainers,
+                    error: nil)
                 self.articles = jsonObject as [[String:String]]
                 //NSUserDefaults.standardUserDefaults().setObject(jsonData, forKey: "AttendingsJSONData")
                 SVProgressHUD.showSuccessWithStatus("获取成功")
+                self.loading = false
                 self.tableView.reloadData()
             },
             failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
                 NSLog("%@", error)
                 SVProgressHUD.showErrorWithStatus("请检查网络连接")
+                self.loading = false
             }
         )
     }
-
-
+    
+    // MARK: - Life cycle
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.loading {
+            SVProgressHUD.show()
+        }
+        else if articles.isEmpty {
+            self.loadArticles()
+        }
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        SVProgressHUD.dismiss()
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

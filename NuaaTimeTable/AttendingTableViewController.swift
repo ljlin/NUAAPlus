@@ -57,6 +57,9 @@ class AttendingTableViewController: UITableViewController {
                 self.analyzeJSONData(data)
             }
         }
+        if self.attendings.isEmpty {
+            self.getButtonClicked(self)
+        }
     }
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

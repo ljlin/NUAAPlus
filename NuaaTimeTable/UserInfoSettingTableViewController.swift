@@ -29,7 +29,7 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
             //xqIdx = $.indexOf(self.xqArray,value: user.xq)!
             xnIdx = findIndex(self.xnArray, user.xn)!
             xqIdx = findIndex(self.xqArray, user.xq)!
-            self.semesterDatePicker.setDate(self.engine.calculateFirstSemesterMonday(), animated: true)
+            self.semesterDatePicker.setDate(self.engine.calculateFirstSemesterMondaybySetting(), animated: true)
         }
         else if let xh = NSUserDefaults.standardUserDefaults().stringForKey("xh_preference") {
             self.xhTextField.text = xh
@@ -71,11 +71,12 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         for key in ["DEDUserInfo","CourseTableXML","xh_preference","AttendingsJSONData"] {
             NSUserDefaults.standardUserDefaults().removeObjectForKey(key)
         }
+        var alert = UIAlertView(title: "清除成功", message: "成功清除所有缓存数据", delegate: nil, cancelButtonTitle: "确定")
+        alert.show()
     }
     @IBAction func switchChanged(sender: UISwitch) {
         if sender.on{
             self.semesterDatePicker.enabled = false //=  UIControlState.Disabled
-            NSLog("rdfsfsgf")
         }
         else {
             self.semesterDatePicker.enabled = true //.state = UIControlState.Normal
@@ -83,12 +84,12 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
 
     }
     
-    //PickerView
+    //MARK: - PickerView
     
     let xnArray = ["2013-2014","2014-2015"]// ["2013-2014","2014-2015","2015-2016","2016-2017"]
     let xqArray = ["1","2"]
-    var xn = "hehe"
-    var xq = "haha"
+    var xn = "2013-2014"
+    var xq = "1"
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -104,6 +105,10 @@ class UserInfoSettingTableViewController: UITableViewController,UIPickerViewData
         }
         else{
             xq = xqArray[row]
+        }
+        if self.setDateManually.on == false {
+            let semesterDate = self.engine.calculateFirstSemesterMondaybyxn(xn, andxq: xq)
+            self.semesterDatePicker.setDate(semesterDate, animated: true)
         }
     }
 

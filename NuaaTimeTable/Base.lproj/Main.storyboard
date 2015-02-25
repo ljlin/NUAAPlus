@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iQE-8e-NHq">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,13 +8,13 @@
         <!--个人课表-->
         <scene sceneID="ryx-2u-H1y">
             <objects>
-                <tableViewController id="M76-Cc-wgj" customClass="CourseTableViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="M76-Cc-wgj" customClass="CourseTableViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" id="939-8o-LUz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseInfoCellIdentifier" rowHeight="132" id="e1O-uE-cpT" customClass="CourseInfoCell" customModule="NUAA_" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseInfoCellIdentifier" rowHeight="132" id="e1O-uE-cpT" customClass="CourseInfoCell" customModule="NUAAPlus" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e1O-uE-cpT" id="9w2-7z-Ixb">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -84,7 +83,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="个人课表" id="K5v-s5-0Vr">
-                        <barButtonItem key="leftBarButtonItem" title="获取" id="BE1-iG-lmZ">
+                        <barButtonItem key="leftBarButtonItem" title="刷新" id="BE1-iG-lmZ">
                             <connections>
                                 <action selector="getButtonClicked:" destination="M76-Cc-wgj" id="zCm-72-LFt"/>
                             </connections>
@@ -103,7 +102,7 @@
         <!--Login View Controller-->
         <scene sceneID="ehV-S9-73Z">
             <objects>
-                <viewController id="Ico-WC-jYG" customClass="LoginViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ico-WC-jYG" customClass="LoginViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ABK-P5-C7Z"/>
                         <viewControllerLayoutGuide type="bottom" id="jw6-eQ-jDv"/>
@@ -177,7 +176,7 @@
         <!--CalendarViewController-->
         <scene sceneID="9DC-ID-x3K">
             <objects>
-                <viewController storyboardIdentifier="SchoolCalendarViewController" title="CalendarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sTC-JJ-XUr" customClass="SchoolCalendarViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SchoolCalendarViewController" title="CalendarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sTC-JJ-XUr" customClass="SchoolCalendarViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7aL-hx-agg"/>
                         <viewControllerLayoutGuide type="bottom" id="STU-Zk-Vdw"/>
@@ -211,7 +210,7 @@
         <!--设置-->
         <scene sceneID="Z4B-G0-Ys9">
             <objects>
-                <tableViewController id="oL2-zX-rya" customClass="UserInfoSettingTableViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oL2-zX-rya" customClass="UserInfoSettingTableViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BVF-Fv-3t0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,7 +463,7 @@
         <!--修读课程-->
         <scene sceneID="XYH-nq-Yzb">
             <objects>
-                <tableViewController id="fkl-Eu-oFb" customClass="AttendingTableViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fkl-Eu-oFb" customClass="AttendingTableViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7YN-Ds-WX2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,7 +496,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="修读课程" id="qYa-DP-Kjt">
-                        <barButtonItem key="leftBarButtonItem" title="获取" id="xeI-O6-CRZ">
+                        <barButtonItem key="leftBarButtonItem" title="刷新" id="xeI-O6-CRZ">
                             <connections>
                                 <action selector="getButtonClicked:" destination="fkl-Eu-oFb" id="pHV-fL-bOr"/>
                             </connections>
@@ -530,7 +529,7 @@
         <!--考试安排-->
         <scene sceneID="Tob-u4-M3e">
             <objects>
-                <viewController storyboardIdentifier="ExamListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7e-eD-lsG" customClass="ExamListViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExamListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R7e-eD-lsG" customClass="ExamListViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OOi-qM-Xal"/>
                         <viewControllerLayoutGuide type="bottom" id="ahO-tz-JfW"/>
@@ -547,8 +546,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fAB-OZ-1uQ" secondAttribute="trailing" id="B1U-f0-Vft"/>
-                            <constraint firstItem="fAB-OZ-1uQ" firstAttribute="bottom" secondItem="ahO-tz-JfW" secondAttribute="top" id="EQ4-JK-JHu"/>
                             <constraint firstItem="fAB-OZ-1uQ" firstAttribute="leading" secondItem="cBI-H8-XV0" secondAttribute="leading" id="Hkm-Vd-vOh"/>
+                            <constraint firstItem="ahO-tz-JfW" firstAttribute="top" secondItem="fAB-OZ-1uQ" secondAttribute="bottom" id="I0R-cr-JhV"/>
                             <constraint firstItem="fAB-OZ-1uQ" firstAttribute="top" secondItem="cBI-H8-XV0" secondAttribute="top" id="Zxr-BD-CeS"/>
                         </constraints>
                     </view>
@@ -564,7 +563,7 @@
         <!--教务通知-->
         <scene sceneID="1ei-pL-28n">
             <objects>
-                <tableViewController id="xc5-K7-rB8" customClass="ArticlesTableViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="xc5-K7-rB8" customClass="ArticlesTableViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cra-36-WHR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -602,7 +601,7 @@
         <!--Page View Controller-->
         <scene sceneID="Nte-c1-65r">
             <objects>
-                <viewController id="oI3-ly-qck" customClass="PageViewController" customModule="NUAA_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oI3-ly-qck" customClass="PageViewController" customModule="NUAAPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ho9-Dc-p5z"/>
                         <viewControllerLayoutGuide type="bottom" id="4b8-UM-U7r"/>

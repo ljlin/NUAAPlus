@@ -21,7 +21,7 @@ class DEDCourseInfo: NSObject, LLKVCoding {
 
     var title    : String { return "\(self.kcm) \(self.jsm)" }
     var location : String { return "\(self.roomid)@\(self.xiaoqu)"}
-    var time     : String { return "周\(self.week)第\(self.unit)-\(self.unit+self.lsjs)节"}
+    var time     : String { return "周\(self.week)第\(self.unit)-\(self.unit+self.lsjs-1)节"}
     
     class var keys : [String] {
         return ["kcm","jsm","xiaoqu","roomid","week","unit","lsjs","weeks","title","location","time"]

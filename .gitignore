@@ -42,6 +42,8 @@ profile
 *.log
 xcuserdata
 
+*.playground
+
 *.pbxuser
 *.mode2v3
 *.mode1v3

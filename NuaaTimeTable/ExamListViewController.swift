@@ -14,6 +14,7 @@ class ExamListViewController: UIViewController {
     var baseURL = "http://ded.nuaa.edu.cn/NetEa/ExaminationManagement/ViewManagement/List1.aspx"
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.webView.scrollView.showsHorizontalScrollIndicator = false
         self.webView.scalesPageToFit = true
         self.webView.loadRequest(NSURLRequest(URL: NSURL(string: self.baseURL + "?xn=&xq=&type=xh&key=161310124")!))
     }
