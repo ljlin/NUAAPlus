@@ -18,7 +18,7 @@ class CourseTableViewController: UITableViewController,UIActionSheetDelegate,UIA
             res = self.engine.getCourseTableBySettings()
         }).main({
             if res {
-                SVProgressHUD.showSuccessWithStatus("获取成功")
+                SVProgressHUD.showSuccessWithStatus("刷新成功")
                 self.tableView.reloadData()
             }
             else {

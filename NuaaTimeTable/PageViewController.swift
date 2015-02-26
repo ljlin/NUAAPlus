@@ -12,7 +12,7 @@ class PageViewController: UIViewController {
     var id = ""
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
-        SVProgressHUD.show()
+        //SVProgressHUD.show()
         let baseString = "http://nuaavt.sinaapp.com/chen/dedpageapi.php"
         var manager = AFHTTPRequestOperationManager()
         manager.responseSerializer = AFHTTPResponseSerializer()
@@ -22,7 +22,7 @@ class PageViewController: UIViewController {
                 //NSUserDefaults.standardUserDefaults().setObject(jsonData, forKey: "AttendingsJSONData")
                 let HTML = NSString(data: htmlData, encoding: NSUTF8StringEncoding)
                 self.webView.loadHTMLString(HTML, baseURL: nil)
-                SVProgressHUD.showSuccessWithStatus("载入完成")
+                //SVProgressHUD.showSuccessWithStatus("载入完成")
             },
             failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
                 NSLog("%@", error)

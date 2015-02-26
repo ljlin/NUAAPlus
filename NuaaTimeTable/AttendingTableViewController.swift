@@ -36,7 +36,7 @@ class AttendingTableViewController: UITableViewController {
                     let jsonData = responseObject as NSData
                     self.analyzeJSONData(jsonData)
                     NSUserDefaults.standardUserDefaults().setObject(jsonData, forKey: "AttendingsJSONData")
-                    SVProgressHUD.showSuccessWithStatus("获取成功")
+                    SVProgressHUD.showSuccessWithStatus("刷新成功")
                 },
                 failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
                     NSLog("%@", error)

@@ -28,7 +28,7 @@ class ArticlesTableViewController: UITableViewController {
                     error: nil)
                 self.articles = jsonObject as [[String:String]]
                 //NSUserDefaults.standardUserDefaults().setObject(jsonData, forKey: "AttendingsJSONData")
-                SVProgressHUD.showSuccessWithStatus("获取成功")
+                SVProgressHUD.showSuccessWithStatus("载入完成")
                 self.loading = false
                 self.tableView.reloadData()
             },
