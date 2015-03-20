@@ -648,9 +648,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Yanlin Liu (U7E32FEDXA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yanlin Liu (U7E32FEDXA)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -670,7 +670,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0e7a2e14-6799-46d7-8448-3679f59fd68e";
+				PROVISIONING_PROFILE = "ce3c5174-73e6-490b-a1f3-95e27748fc6a";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -707,7 +707,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "6c63ce84-1050-4a8a-b959-b0f1df10495a";
+				PROVISIONING_PROFILE = "ce3c5174-73e6-490b-a1f3-95e27748fc6a";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -718,7 +718,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Yanlin Liu (U7E32FEDXA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yanlin Liu (U7E32FEDXA)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
@@ -728,7 +729,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = NUAAPlus;
-				PROVISIONING_PROFILE = "6c63ce84-1050-4a8a-b959-b0f1df10495a";
+				PROVISIONING_PROFILE = "ce3c5174-73e6-490b-a1f3-95e27748fc6a";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -749,7 +750,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = NUAAPlus;
-				PROVISIONING_PROFILE = "6c63ce84-1050-4a8a-b959-b0f1df10495a";
+				PROVISIONING_PROFILE = "ce3c5174-73e6-490b-a1f3-95e27748fc6a";
 				SWIFT_OBJC_BRIDGING_HEADER = ./Bridging.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

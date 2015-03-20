@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //SVProgressHUD.setBackgroundColor(UIColor(red: 100/255, green: 200/255, blue: 255/255, alpha: 0.5))
+        //SVProgressHUD.setBackgroundCo、or(UIColor(red: 100/255, green: 200/255, blue: 255/255, alpha: 0.5))
         SVProgressHUD.setBackgroundColor(UIColor.grayColor().colorWithAlphaComponent(0.3))
         let tabBarController = self.window?.rootViewController as UITabBarController
         let imageNames = ["bulb_F","memo_F","notepad_F","ID_card_F","pen_F","calender_F"]
@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

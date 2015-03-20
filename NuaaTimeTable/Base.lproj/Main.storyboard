@@ -112,7 +112,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2I-pi-VHx">
-                                <rect key="frame" x="16" y="45" width="34" height="20.5"/>
+                                <rect key="frame" x="16" y="45" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -266,7 +266,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-3b-HZO">
-                                                    <rect key="frame" x="0.0" y="8.5" width="600" height="162"/>
+                                                    <rect key="frame" x="0.0" y="9" width="600" height="162"/>
                                                     <connections>
                                                         <outlet property="dataSource" destination="oL2-zX-rya" id="acX-6F-G3A"/>
                                                         <outlet property="delegate" destination="oL2-zX-rya" id="97A-2f-PRm"/>
@@ -322,7 +322,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zwm-dH-OcA">
-                                                    <rect key="frame" x="0.0" y="-4.5" width="600" height="162"/>
+                                                    <rect key="frame" x="0.0" y="-5" width="600" height="162"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="445784134.91355997">
                                                         <!--2015-02-16 12:55:34 +0000-->
                                                     </date>
@@ -347,7 +347,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKe-Fu-3Cp">
-                                                    <rect key="frame" x="255" y="8" width="90" height="27.5"/>
+                                                    <rect key="frame" x="255" y="8" width="90" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="7bi-5j-5vg"/>
                                                     </constraints>
@@ -420,7 +420,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RRV-te-EVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="3474"/>
+            <point key="canvasLocation" x="-255" y="3986"/>
         </scene>
         <!--个人课表-->
         <scene sceneID="y6z-J3-Dgn">
