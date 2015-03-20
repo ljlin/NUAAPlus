@@ -2,6 +2,9 @@
 Import NUAA student timetable on iOS
 
 已经上架到APPStore  [戳这里去下载](https://itunes.apple.com/us/app/yan-hu-pan/id969851135?l=zh&ls=1&mt=8)
+<p style="text-align:center">
+<a href="https://itunes.apple.com/us/app/yan-hu-pan/id969851135?l=zh&ls=1&mt=8" target="_blank"><img src="Screenshots/icon_apple_store-download-small.png" width="180" /></a>
+</p>
 
 用iPone的同学一定对课程格子和超级课程表不能在通知栏显示烦恼很久了，Android可以有桌面插件啊有木有！打开手机就能看到啊有木有！为毛我看个课程表还得解锁，打开应用啊有木有！很麻烦啊有木有！
 
@@ -57,6 +60,7 @@ Q:你怎么保证我信任你呢？|A:我的代码是开源的啊 =_= [戳这里
 - PM Extra 
 - c0r3d3v [NUAACalendarImporter](https://github.com/c0r3d3v/NUAACalendarImporter)
 - Richard Wei
+- lengyunfei (icon designer)
 
 ## Screenshots
 
